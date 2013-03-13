@@ -5,7 +5,7 @@ import fr.univaix.iut.pokebattle.Tweet;
 
 public class PokemonInterlocCell implements SmartCell
 {
-	String Interloc = new String (" you bastard!");
+	String Interloc = new String();
 	public String ask(Tweet question) 
 	{
 		// Interloc = "@Author du tweet";
