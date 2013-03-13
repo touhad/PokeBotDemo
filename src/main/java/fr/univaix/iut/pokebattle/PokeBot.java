@@ -1,6 +1,8 @@
 package fr.univaix.iut.pokebattle;
 
+import fr.univaix.iut.pokebattle.smartcells.PokemonAttackCell;
 import fr.univaix.iut.pokebattle.smartcells.PokemonCriesCell;
+import fr.univaix.iut.pokebattle.smartcells.PokemonInterlocCell;
 
 
 public class PokeBot implements Bot {
@@ -8,8 +10,12 @@ public class PokeBot implements Bot {
      * List of SmartCells the questions go through to
      * find an answer.
      */
-    final SmartCell[] smartCells = new SmartCell[]{
+    final SmartCell[] smartCells = new SmartCell[]
+    {
             new PokemonCriesCell(),
+            new PokemonAttackCell(),
+            new PokemonInterlocCell()
+            
     };
 
     /**
@@ -19,6 +25,8 @@ public class PokeBot implements Bot {
      * @return An answer... or null if it doesn't get it.
      */
     @Override
+    
+    
     public String ask(Tweet question) {
         for (SmartCell cell : smartCells) {
             String answer = cell.ask(question);
