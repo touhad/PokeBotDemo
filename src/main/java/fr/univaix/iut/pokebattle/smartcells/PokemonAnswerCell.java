@@ -1,5 +1,11 @@
 package fr.univaix.iut.pokebattle.smartcells;
 
-public class PokemonAnswerCell {
+import fr.univaix.iut.pokebattle.Tweet;
 
+public class PokemonAnswerCell 
+{
+	
+	 public String ask(Tweet question) {
+	        return "Pika pika";
+	    }
 }
