@@ -1,6 +1,5 @@
 package fr.univaix.iut.pokebattle;
 
-import fr.univaix.iut.pokebattle.smartcells.PokemonCriesCell;
 import fr.univaix.iut.pokebattle.smartcells.PokemonCriesGeneCell;
 
 
