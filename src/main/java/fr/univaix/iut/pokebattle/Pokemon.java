@@ -1,26 +1,25 @@
 package fr.univaix.iut.pokebattle;
 
 public class Pokemon {
-	
+
 	// Pour pikachu son evolution sera Raichu et sa prevolution Pichu.
 	private String Nom, Type, Caractere, Couleur, Eleveur, Evolution, Prevolution, Cri;	
 
 	private int Num, Experience, Niveau, VieMax, VieActuel;
 	private float Taille, Poid;
-	
+
 	// Constructeur Pokemon
 	public Pokemon (String nom) {
 		Nom = nom;
 	} 
-	
+
 	// Fonction qui renvoie vrai si le pokemon n'a pas de maître.
 	public boolean IsSauvage (Pokemon pokemon) {
-		
 		if (pokemon.getEleveur() == null)
 			return true;
 		return false;		
 	}//IsSauvage
-	
+
 
 	// Getteurs & Setteurs	
 	public String getCri() {
@@ -104,5 +103,4 @@ public class Pokemon {
 	public void setPoid(float poid) {
 		Poid = poid;
 	}
-	
 }

@@ -2,11 +2,9 @@ package fr.univaix.iut.pokebattle;
 
 
 import fr.univaix.iut.pokebattle.smartcells.PokemonCriesCell;
-<<<<<<< HEAD
 import fr.univaix.iut.pokebattle.smartcells.PokemonInterlocCell;
-=======
 import fr.univaix.iut.pokebattle.smartcells.PokemonOwnerCell;
->>>>>>> F-3-pokemon-indique-eleveur
+
 
 
 public class PokeBot implements Bot {
@@ -14,16 +12,11 @@ public class PokeBot implements Bot {
      * List of SmartCells the questions go through to
      * find an answer.
      */
-<<<<<<< HEAD
-    final SmartCell[] smartCells = new SmartCell[]
-    {
+
+    final SmartCell[] smartCells = new SmartCell[] {
+    		
             new PokemonInterlocCell(), new PokemonCriesCell()
-            
-=======
-    final SmartCell[] smartCells = new SmartCell[]{
-    		new PokemonOwnerCell(), new PokemonCriesCell() 
->>>>>>> F-3-pokemon-indique-eleveur
-    };
+    };        
 
     /**
      * Ask something to BoBot, it will respond to you.
