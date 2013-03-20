@@ -28,4 +28,24 @@ public class PokeBot implements Bot {
         return null;
     }
 
+	public String Adv() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String juge() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String Owner() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean vie() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
