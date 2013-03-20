@@ -1,6 +1,7 @@
 package fr.univaix.iut.pokebattle;
 
 import fr.univaix.iut.pokebattle.smartcells.PokemonCriesCell;
+import fr.univaix.iut.pokebattle.smartcells.PokemonCriesGeneCell;
 
 
 public class PokeBot implements Bot {
@@ -9,7 +10,7 @@ public class PokeBot implements Bot {
      * find an answer.
      */
     final SmartCell[] smartCells = new SmartCell[]{
-            new PokemonCriesCell(),
+            new PokemonCriesGeneCell()
     };
 
     /**
