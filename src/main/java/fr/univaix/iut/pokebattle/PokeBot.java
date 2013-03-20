@@ -1,6 +1,5 @@
 package fr.univaix.iut.pokebattle;
 
-import fr.univaix.iut.pokebattle.smartcells.PokemonAnswerCell;
 import fr.univaix.iut.pokebattle.smartcells.PokemonCriesCell;
 
 
@@ -10,7 +9,7 @@ public class PokeBot implements Bot {
      * find an answer.
      */
     final SmartCell[] smartCells = new SmartCell[]{
-            new PokemonCriesCell(), new PokemonAnswerCell()
+            new PokemonCriesCell(),
     };
 
     /**
@@ -28,25 +27,5 @@ public class PokeBot implements Bot {
         }
         return null;
     }
-
-	public String Adv() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public String juge() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public String Owner() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public boolean vie() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 }
