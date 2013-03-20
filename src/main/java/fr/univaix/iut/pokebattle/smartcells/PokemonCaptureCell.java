@@ -20,8 +20,8 @@ public class PokemonCaptureCell {
     			Mewtwo.setEleveur(NomEleveur);
 
     	}
-    		return  "@Alex @Alex is my Owner";
-    	/*return NomEleveur + " " + NomEleveur + " is my Owner";  		*/
+
+    		return NomEleveur + " " + NomEleveur + " is my Owner";
     }
 
 }
