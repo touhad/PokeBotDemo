@@ -11,10 +11,11 @@ import static org.junit.Assert.assertEquals;
  */
 public class PokeBotTest {
     PokeBot pokeBot = new PokeBot();
-
+    /*
     @Test
     public void testSalut() {
         assertEquals("Pika pika", pokeBot.ask(new Tweet("Salut")));
         assertEquals("Pika pika", pokeBot.ask(new Tweet("This is not a question.")));
     }
+    */
 }

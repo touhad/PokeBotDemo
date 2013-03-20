@@ -5,13 +5,37 @@ public class Pokemon {
 	// Pour pikachu son evolution sera Raichu et sa prevolution Pichu.
 	private String Nom, Type, Caractere, Couleur, Eleveur, Evolution, Prevolution, Cri;	
 
-	private int Num, Experience, Niveau, VieMax, VieActuel;
+	private int Num, Experience, Niveau, VieMax, VieActuel, Attaque;
+	
+
 	private float Taille, Poid;
 	
 	// Constructeur Pokemon
 	public Pokemon (String nom) {
 		Nom = nom;
 	} 
+	
+	public Pokemon (String nom, String type, String caractere, String couleur, String eleveur, String evolution,
+			String prevolution, String cri, int num, int experience, int niveau, int vieMax, int vieActuel, int attaque,
+			float taille, float poid) {
+		
+		Nom = nom;
+		Type = type;
+		Caractere = caractere;
+		Couleur = couleur;
+		Eleveur = eleveur;
+		Evolution = evolution;
+		Prevolution = prevolution;
+		Cri = cri;
+		Num = num;
+		Experience = experience;
+		Niveau = niveau;
+		VieMax = vieMax;
+		VieActuel = vieActuel;
+		Attaque = attaque;
+		Taille = taille;
+		Poid = poid;
+	}
 	
 	// Fonction qui renvoie vrai si le pokemon n'a pas de maître.
 	public boolean IsSauvage (Pokemon pokemon) {
@@ -23,6 +47,15 @@ public class Pokemon {
 	
 
 	// Getteurs & Setteurs	
+	public int getAttaque() {
+		return Attaque;
+	}
+
+	public void setAttaque(int attaque) {
+		Attaque = attaque;
+	}
+	
+	
 	public String getCri() {
 		return Cri;
 	}
