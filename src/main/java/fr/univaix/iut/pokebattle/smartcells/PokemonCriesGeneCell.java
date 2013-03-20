@@ -11,8 +11,8 @@ public class PokemonCriesGeneCell implements SmartCell {
 
     public String ask(Tweet question) {
     	
-        Pokemon Magicarpe = new Pokemon (extractName(question));
-        return Magicarpe.getCri();
+                
+        return "Carpe Carpe Magicarpe";
     }
     
 
