@@ -34,7 +34,7 @@ public class Pokemon {
 		return Eleveur;
 	}
 
-	public void Eleveur(String Eleveur) {
+	public void setEleveur(String Eleveur) {
 		this.Eleveur = Eleveur;
 	}
 

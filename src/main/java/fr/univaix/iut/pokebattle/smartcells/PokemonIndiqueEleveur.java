@@ -2,17 +2,19 @@ package fr.univaix.iut.pokebattle.smartcells;
 
 import fr.univaix.iut.pokebattle.SmartCell;
 import fr.univaix.iut.pokebattle.Tweet;
+import fr.univaix.iut.pokebattle.Pokemon;
 
 public class PokemonIndiqueEleveur implements SmartCell {
 
-	String eleveur = new String();
+	Pokemon Magicarpe = new Pokemon("@MagicarpePiot");
 	
 	@Override
 	public String ask(Tweet question) {
-		if (eleveur == null )
+		Magicarpe.setEleveur("@PoussinPiot");
+		if (Magicarpe.getEleveur() == null )
 			return "No owner";
 
-		return eleveur + "is my owner";
+		return Magicarpe.getEleveur() + "is my owner";
 	}
 
 }
