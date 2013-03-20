@@ -19,5 +19,10 @@ public class PokemonCriesCellTest {
     public void testNotSalut() {
         assertEquals("Pika pika", cell.ask(new Tweet("au revoir")));
     }
+    
+    /*@Test
+    public void testCapturePokemon() {
+        assertEquals("@Alex @Alex is my owner", cell.ask(new Tweet("@Mewtwo Pokeball!")));
+    }*/
 
 }
