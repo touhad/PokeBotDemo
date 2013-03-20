@@ -10,7 +10,7 @@ public class PokemonOwnerCellTest {
 	
 	@Test
 	public void testOwner(){
-		assertEquals("@PoussinPiot is my owner", cell.ask(new Tweet("Owner ?")));
+		assertEquals("No owner", cell.ask(new Tweet("Owner ?")));
 	}
 
 }
