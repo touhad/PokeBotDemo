@@ -12,7 +12,7 @@ public class PokemonCriesGeneCell implements SmartCell {
     public String ask(Tweet question) {
     	
                 
-        return "Carpe Carpe Magicarpe";
+        return "@" + question.getScreenName() +" Carpe Carpe Magicarpe";
     }
     
 

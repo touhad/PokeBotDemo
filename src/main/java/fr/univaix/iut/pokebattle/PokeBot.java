@@ -9,7 +9,7 @@ public class PokeBot implements Bot {
      * find an answer.
      */
     final SmartCell[] smartCells = new SmartCell[]{
-            new PokemonCriesGeneCell()
+            new PokemonCriesGeneCell(), 
     };
 
     /**
