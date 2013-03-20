@@ -9,8 +9,8 @@ public class PokemonCaptureCell implements SmartCell {
     public String ask(Tweet question) {
     	
     	String Question = question.getText();
-    	String NomEleveur = "AlexPanizziG4";
-   /* 	String NomEleveur = question.getScreenName(); */
+    	/*String NomEleveur = "AlexPanizziG4";*/
+   	String NomEleveur = question.getScreenName(); 
 		Pokemon Ramoloss = new Pokemon ("@RamolossPiot", "Eau", "Argneu", "Rouge royal", null, "Flagados",
 				  null, "Blourf Blourf", 129, 0, 1, 100, 100, 10, 21, 9);
 
