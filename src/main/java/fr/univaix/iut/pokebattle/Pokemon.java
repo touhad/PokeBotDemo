@@ -1,41 +1,41 @@
 package fr.univaix.iut.pokebattle;
 
 public class Pokemon {
-	
-	// Pour pikachu son evolution sera Raichu et sa prevolution Pichu.
-	private String Nom, Type, Caractere, Couleur, maitre, evolution, prevolution, cri;	
 
-	private int Num, Experience, Niveau;
+	// Pour pikachu son evolution sera Raichu et sa prevolution Pichu.
+	private String Nom, Type, Caractere, Couleur, Eleveur, Evolution, Prevolution, Cri;	
+
+	private int Num, Experience, Niveau, VieMax, VieActuel;
 	private float Taille, Poid;
-	
+
 	// Constructeur Pokemon
-	Pokemon (String nom) {
+	public Pokemon (String nom) {
 		Nom = nom;
 	} 
-	
+
 	// Fonction qui renvoie vrai si le pokemon n'a pas de maître.
-	boolean IsSauvage (Pokemon pokemon) {
-		
-		if (pokemon.getMaitre() == null)
+	public boolean IsSauvage (Pokemon pokemon) {
+
+		if (pokemon.getEleveur() == null)
 			return true;
 		return false;		
 	}//IsSauvage
-	
+
 
 	// Getteurs & Setteurs	
 	public String getCri() {
-		return cri;
+		return Cri;
 	}
 
 	public void setCri(String cri) {
-		this.cri = cri;
+		this.Cri = cri;
 	}
-	public String getMaitre() {
-		return maitre;
+	public String getEleveur() {
+		return Eleveur;
 	}
 
-	public void setMaitre(String maitre) {
-		this.maitre = maitre;
+	public void setEleveur(String Eleveur) {
+		this.Eleveur = Eleveur;
 	}
 
 	public String getNom() {
@@ -81,16 +81,16 @@ public class Pokemon {
 		Niveau = niveau;
 	}
 	public String getEvolution() {
-		return evolution;
+		return Evolution;
 	}
 	public void setEvolution(String evolution) {
-		this.evolution = evolution;
+		this.Evolution = evolution;
 	}
 	public String getPrevolution() {
-		return prevolution;
+		return Prevolution;
 	}
 	public void setPrevolution(String prevolution) {
-		this.prevolution = prevolution;
+		this.Prevolution = prevolution;
 	}
 	public float getTaille() {
 		return Taille;
@@ -104,5 +104,4 @@ public class Pokemon {
 	public void setPoid(float poid) {
 		Poid = poid;
 	}
-	
 }
