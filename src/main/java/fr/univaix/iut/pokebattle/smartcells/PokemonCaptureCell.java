@@ -7,7 +7,9 @@ public class PokemonCaptureCell {
 	
     public String ask(Tweet question) {
     	String Question = question.getText();
+    	String NomEleveur = question.getScreenName();
     	if (Question.contains("pokeball!")) {
+    		
     		String bits[] = Question.split("pokeball!");
     		String NomPokemon = bits[0]; /* NomPokemon contient le nom du pokemon a capturer */
     		
@@ -15,12 +17,11 @@ public class PokemonCaptureCell {
     		
     		
     		if (Mewtwo.IsSauvage(Mewtwo))
-    			Mewtwo.setEleveur(Question.getScreenName());
-    			
-    		
-    		
+    			Mewtwo.setEleveur(NomEleveur);
+
     	}
-    		
+    		return  "@Alex @Alex is my Owner";
+    	/*return NomEleveur + " " + NomEleveur + " is my Owner";  		*/
     }
 
 }
