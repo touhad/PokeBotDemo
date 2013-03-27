@@ -1,4 +1,4 @@
-package fr.univaix.iut.pokebattle;
+package fr.univaix.iut.pokebattle.twitter;
 
 public class Tweet {
     private String text;
@@ -14,7 +14,7 @@ public class Tweet {
     }
 
     public String getScreenName() {
-        return screenName;
+        return "@" + screenName;
     }
 
     public String getText() {

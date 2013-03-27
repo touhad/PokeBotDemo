@@ -1,10 +1,10 @@
 package fr.univaix.iut.pokebattle.SmartCells;
 
-import static org.junit.Assert.*;
+
+
 import fr.univaix.iut.pokebattle.Pokemon;
-import fr.univaix.iut.pokebattle.Tweet;
-import fr.univaix.iut.pokebattle.smartcells.PokemonCaptureCell;
-import org.junit.Test;
+import fr.univaix.iut.pokebattle.smartcell.PokemonCaptureCell;
+
 
 public class PokemonCaptureCellTest {
 	    
@@ -14,7 +14,11 @@ public class PokemonCaptureCellTest {
 		/*
 	    @Test
 	    public void testCapturePokemon() {
+<<<<<<< HEAD
 	        assertEquals("@AlexPanizziG4 @Alex is my Owner", cell.ask(new Tweet("@RamolossPiot Pokeball!")));
+=======
+	        assertEquals("@Alex @Alex is my owner", cell.ask(new Tweet("@Mewtwo Pokeball!")));
+>>>>>>> master
 	    }
 		*/
 }

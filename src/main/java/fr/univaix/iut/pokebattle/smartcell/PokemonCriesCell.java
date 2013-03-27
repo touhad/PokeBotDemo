@@ -1,11 +1,11 @@
-package fr.univaix.iut.pokebattle.smartcells;
+package fr.univaix.iut.pokebattle.smartcell;
 
-import fr.univaix.iut.pokebattle.SmartCell;
-import fr.univaix.iut.pokebattle.Tweet;
+import fr.univaix.iut.pokebattle.twitter.Tweet;
 
 /**
  * Reply to all.
  */
+
 public class PokemonCriesCell implements SmartCell {
 
     public String ask(Tweet question) {
