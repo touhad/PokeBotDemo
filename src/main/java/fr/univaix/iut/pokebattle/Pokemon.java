@@ -9,7 +9,7 @@ public class Pokemon {
 	private float Taille, Poid;
 	
 	// Constructeur Pokemon
-	Pokemon (String nom) {
+	public Pokemon (String nom) {
 		Nom = nom;
 	} 
 	
