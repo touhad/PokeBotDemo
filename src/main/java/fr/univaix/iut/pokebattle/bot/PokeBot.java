@@ -1,7 +1,10 @@
 package fr.univaix.iut.pokebattle.bot;
 
+import fr.univaix.iut.pokebattle.smartcell.PokemonAnswerCell;
+import fr.univaix.iut.pokebattle.smartcell.PokemonCaptureCell;
 import fr.univaix.iut.pokebattle.smartcell.PokemonCriesCell;
 import fr.univaix.iut.pokebattle.smartcell.PokemonCriesGeneCell;
+import fr.univaix.iut.pokebattle.smartcell.PokemonIndiqueEleveur;
 import fr.univaix.iut.pokebattle.smartcell.PokemonOwnerCell;
 import fr.univaix.iut.pokebattle.smartcell.SmartCell;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
@@ -14,7 +17,11 @@ public class PokeBot implements Bot {
      */
     final SmartCell[] smartCells = new SmartCell[]{
 
-            new PokemonCriesGeneCell(), new PokemonOwnerCell(), new PokemonCriesCell() 
+             new PokemonOwnerCell(),
+            new PokemonAnswerCell(), 
+            new PokemonOwnerCell(), 
+            new PokemonIndiqueEleveur(),
+            new PokemonCaptureCell(),
 
     };
 
@@ -29,7 +36,7 @@ public class PokeBot implements Bot {
     	for (SmartCell cell : smartCells) {
             String answer = cell.ask(question);
             if (answer != null)
-                return answer;
+                return question.getScreenName()+ " " + answer;
             
             
         }
