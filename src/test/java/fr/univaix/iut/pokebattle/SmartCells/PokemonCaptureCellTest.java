@@ -11,7 +11,7 @@ public class PokemonCaptureCellTest {
 	
 	    @Test
 	    public void testCapturePokemon() {
-	        assertEquals("@Alex @Alex is my Owner", cell.ask(new Tweet("@Mewtwo Pokeball!")));
+	        assertEquals("@Alex @Alex is my owner", cell.ask(new Tweet("@Mewtwo Pokeball!")));
 	    }
 	
 }
