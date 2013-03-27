@@ -15,11 +15,7 @@ public class PokemonAttackCellTest {
 
     @Test
     public void testSalut() {
-        assertEquals("@MagicarpePiot #attack #trempette! /cc @PoussinPiot", cell.ask(new Tweet("@pikachuNyanNian #attack #foudre @bulbizare1")));
+        assertEquals("@Rondoudou #attack #trempette! /cc @PoussinPiot", cell.ask(new Tweet("@Magicarpe #attack #trempette! @Rondoudou")));
     }
 
-    @Test
-    public void testNotSalut() {
-        assertEquals("Pika pika", cell.ask(new Tweet("au revoir")));
-    }
 }

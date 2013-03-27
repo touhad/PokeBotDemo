@@ -13,9 +13,9 @@ public class PokemonAttackCell implements SmartCell {
 	public String ask(Tweet question) {
 		Magicarpe.setEleveur("@PoussinPiot");
 		if (Magicarpe.getEleveur() != null)
-			return Magicarpe.getEleveur() + " is my owner";
+			return Rondoudou.getNom() + " #attack #trempette! /cc " + Magicarpe.getEleveur();
 		
-		return Rondoudou + " #Trempette !" + " cc/" + Magicarpe.getEleveur();
+		return "No owner";
 	}
 
 }

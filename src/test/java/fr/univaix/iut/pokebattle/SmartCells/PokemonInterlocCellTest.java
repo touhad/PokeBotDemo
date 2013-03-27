@@ -13,7 +13,7 @@ public class PokemonInterlocCellTest
 
     @Test
     public void testSalut() {
-        assertEquals("Pika pika you bastard!", cell.ask(new Tweet("Salut!")));
+        assertEquals("Pika pika", cell.ask(new Tweet("Salut!")));
     }
 
     @Test
