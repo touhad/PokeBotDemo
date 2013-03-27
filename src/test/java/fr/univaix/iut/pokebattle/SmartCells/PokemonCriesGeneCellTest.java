@@ -1,12 +1,12 @@
 package fr.univaix.iut.pokebattle.SmartCells;
 
-import fr.univaix.iut.pokebattle.Tweet;
-import fr.univaix.iut.pokebattle.Pokemon;
-import fr.univaix.iut.pokebattle.smartcells.PokemonCriesGeneCell;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import fr.univaix.iut.pokebattle.Pokemon;
+import fr.univaix.iut.pokebattle.smartcell.PokemonCriesGeneCell;
+import fr.univaix.iut.pokebattle.twitter.Tweet;
 
 public class PokemonCriesGeneCellTest {
 	
