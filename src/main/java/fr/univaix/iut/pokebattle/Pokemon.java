@@ -37,6 +37,22 @@ public class Pokemon {
 		this.Eleveur = Eleveur;
 	}
 
+	public int getVieMax() {
+		return VieMax;
+	}
+
+	public void setVieMax(int vieMax) {
+		VieMax = vieMax;
+	}
+
+	public int getVieActuel() {
+		return VieActuel;
+	}
+
+	public void setVieActuel(int vieActuel) {
+		VieActuel = vieActuel;
+	}
+
 	public String getNom() {
 		return Nom;
 	}

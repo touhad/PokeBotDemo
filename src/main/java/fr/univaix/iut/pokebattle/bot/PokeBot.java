@@ -1,18 +1,9 @@
 package fr.univaix.iut.pokebattle.bot;
 
-<<<<<<< HEAD:src/main/java/fr/univaix/iut/pokebattle/PokeBot.java
-
-import fr.univaix.iut.pokebattle.smartcells.PokemonAttackCell;
-import fr.univaix.iut.pokebattle.smartcells.PokemonCriesCell;
-import fr.univaix.iut.pokebattle.smartcells.PokemonInterlocCell;
-import fr.univaix.iut.pokebattle.smartcells.PokemonOwnerCell;
-
-=======
+import fr.univaix.iut.pokebattle.smartcell.PokemonAttackCell;
 import fr.univaix.iut.pokebattle.smartcell.PokemonCriesCell;
 import fr.univaix.iut.pokebattle.smartcell.SmartCell;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
->>>>>>> master:src/main/java/fr/univaix/iut/pokebattle/bot/PokeBot.java
-
 
 public class PokeBot implements Bot {
     /**
@@ -20,13 +11,13 @@ public class PokeBot implements Bot {
      * find an answer.
      */
 
+
     final SmartCell[] smartCells = new SmartCell[] {
     		
            new PokemonAttackCell(),
-           new PokemonOwnerCell(),
-           new PokemonInterlocCell(),
            new PokemonCriesCell()
     };        
+
 
     /**
      * Ask something to Bot, it will respond to you.
