@@ -6,6 +6,7 @@ import fr.univaix.iut.pokebattle.Tweet;
 /**
  * Reply to all.
  */
+
 public class PokemonCriesCell implements SmartCell {
 
     public String ask(Tweet question) {
