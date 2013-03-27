@@ -8,12 +8,18 @@ public class PokemonCaptureCell implements SmartCell {
 	
     public String ask(Tweet question) {
     	
-    	String Question = question.getText();
-    	/*String NomEleveur = "AlexPanizziG4";*/
-   	String NomEleveur = question.getScreenName(); 
+    	String Question = question.getText(); // Question contient le Tweet
+    	String NomEleveur = question.getScreenName(); //Contiens le nom du twitteur
 		Pokemon Ramoloss = new Pokemon ("@RamolossPiot", "Eau", "Argneu", "Rouge royal", null, "Flagados",
 				  null, "Blourf Blourf", 129, 0, 1, 100, 100, 10, 21, 9);
 
+		/* TO-DO 
+		 * -Récupérer le nom du pokemon
+		 * -Se connecter au pokemon correspondant
+		 * -Récupérer son nom d'éleveur !
+		 * - Si pas d'éleveur modifier dans la base le nouvelle éleveur
+		 * -Adapter la suite du code et fini !
+		 */
 		
     	if (Question.contains("pokeball!")) {
     		String bits[] = Question.split("pokeball!");

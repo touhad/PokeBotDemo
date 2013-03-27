@@ -1,9 +1,27 @@
 package fr.univaix.iut.pokebattle;
 
+
+@Entity
+@NamedQueries({
+    @NamedQuery(name = Pokemon.FIND_ALL, query = "SELECT p FROM Pokemon p"),
+    @NamedQuery(name = Pokemon.FIND_BY_TYPE, query = "SELECT p FROM Pokemon p WHERE p.type1 = :ftype")
+})
 public class Pokemon {
 	
+	public static final String FIND_BY_TYPE = "findPokemonByType";
+    public static final String FIND_ALL = "findAllPokemon";
+	
 	// Pour pikachu son evolution sera Raichu et sa prevolution Pichu.
-	private String Nom, Type, Caractere, Couleur, Eleveur, Evolution, Prevolution, Cri;	
+    @Id
+    private String name;
+    
+    @Enumerated(EnumType.STRING)
+    private Type1;
+    
+    @Enumerated(EnumType.STRING)
+    private Type2;
+    
+	private String Caractere, Couleur, Eleveur, Evolution, Prevolution, Cri;	
 
 	private int Num, Experience, Niveau, VieMax, VieActuel, Attaque;
 	
@@ -15,12 +33,14 @@ public class Pokemon {
 		Nom = nom;
 	} 
 	
+
 	public Pokemon (String nom, String type, String caractere, String couleur, String eleveur, String evolution,
 			String prevolution, String cri, int num, int experience, int niveau, int vieMax, int vieActuel, int attaque,
 			float taille, float poid) {
 		
+
 		Nom = nom;
-		Type = type;
+		Type = type;	
 		Caractere = caractere;
 		Couleur = couleur;
 		Eleveur = eleveur;
@@ -153,5 +173,17 @@ public class Pokemon {
 	public void setPoid(float poid) {
 		Poid = poid;
 	}
+	
+	@Override
+	public String toString() {
+		return "Pokemon [Nom=" + Nom + ", Type=" + Type + ", Caractere="
+				+ Caractere + ", Couleur=" + Couleur + ", Eleveur=" + Eleveur
+				+ ", Evolution=" + Evolution + ", Prevolution=" + Prevolution
+				+ ", Cri=" + Cri + ", Num=" + Num + ", Experience="
+				+ Experience + ", Niveau=" + Niveau + ", VieMax=" + VieMax
+				+ ", VieActuel=" + VieActuel + ", Attaque=" + Attaque
+				+ ", Taille=" + Taille + ", Poid=" + Poid + "]";
+	}
+	
 	
 }
