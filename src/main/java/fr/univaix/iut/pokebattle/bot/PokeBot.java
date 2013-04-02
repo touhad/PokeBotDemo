@@ -1,5 +1,7 @@
 package fr.univaix.iut.pokebattle.bot;
 
+import java.util.GregorianCalendar;
+
 import fr.univaix.iut.pokebattle.smartcell.PokemonAnswerCell;
 import fr.univaix.iut.pokebattle.smartcell.PokemonCaptureCell;
 import fr.univaix.iut.pokebattle.smartcell.PokemonCriesCell;
@@ -17,11 +19,12 @@ public class PokeBot implements Bot {
      */
     final SmartCell[] smartCells = new SmartCell[]{
 
-             new PokemonOwnerCell(),
+    		new PokemonCaptureCell(), 
+    		new PokemonOwnerCell(),
             new PokemonAnswerCell(), 
             new PokemonOwnerCell(), 
             new PokemonIndiqueEleveur(),
-            new PokemonCaptureCell(),
+            
 
     };
 
@@ -36,7 +39,7 @@ public class PokeBot implements Bot {
     	for (SmartCell cell : smartCells) {
             String answer = cell.ask(question);
             if (answer != null)
-                return question.getScreenName()+ " " + answer;
+                return question.getScreenName()+ " " + answer + new GregorianCalendar (); 
             
             
         }
