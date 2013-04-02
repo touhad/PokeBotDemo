@@ -5,7 +5,7 @@ import fr.univaix.iut.pokebattle.twitter.Tweet;
 
 public class PokemonOwnerCell implements SmartCell {
 
-	Pokemon Magicarpe = new Pokemon("@MagicarpePiot");
+	Pokemon Magicarpe = new Pokemon();
 	
 	@Override
 	public String ask(Tweet question) {

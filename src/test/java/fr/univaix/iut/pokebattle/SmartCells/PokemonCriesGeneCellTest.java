@@ -14,7 +14,7 @@ public class PokemonCriesGeneCellTest {
     @Test
     public void testSalut() {
     	PokemonCriesGeneCell cell = new PokemonCriesGeneCell();
-        Pokemon Magicarpe = new Pokemon("@MagicarpePiot");
+        Pokemon Magicarpe = new Pokemon();
         Magicarpe.setCri("Carpe Carpe Magicarpe");
         assertEquals("Carpe Carpe Magicarpe", cell.ask(new Tweet("Salut @MagicarpePiot")));
     }

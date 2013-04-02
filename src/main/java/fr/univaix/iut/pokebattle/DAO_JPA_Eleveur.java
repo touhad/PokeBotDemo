@@ -1,27 +1,27 @@
 package fr.univaix.iut.pokebattle;
-
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 
-public abstract class DAO_JPA_Pokemon implements DAOPokemon {
+public class DAO_JPA_Eleveur {
 
-    private EntityManager entityManager;
-
-    public DAO_JPA_Pokemon(EntityManager entityManager) {
+	private EntityManager entityManager;
+	
+    public DAO_JPA_Eleveur(EntityManager entityManager) {
         this.entityManager = entityManager;
-    }
-
-    public List<Pokemon> findByType(String type) {
-        TypedQuery<Pokemon> query = entityManager.createNamedQuery(Pokemon.FIND_BY_TYPE, Pokemon.class);
-        query.setParameter("ftype", type);
+    }	
+	
+    
+    public List<Eleveur> findByNom(String nom) {
+        TypedQuery<Eleveur> query = entityManager.createNamedQuery(Eleveur.FIND_BY_NOM, Eleveur.class);
+        query.setParameter("fnom", nom);
         return query.getResultList();
     }
-
-    @Override
-    public boolean delete(Pokemon obj) {
+	
+    
+    public boolean delete(Eleveur obj) {
         try {
             EntityTransaction tx = entityManager.getTransaction();
             tx.begin();
@@ -32,29 +32,28 @@ public abstract class DAO_JPA_Pokemon implements DAOPokemon {
             return false;
         }
     }
-
-    @Override
-    public List<Pokemon> findAll() {
-        TypedQuery<Pokemon> query = entityManager.createNamedQuery(Pokemon.FIND_ALL, Pokemon.class);
+	
+    
+    public List<Eleveur> findAll() {
+        TypedQuery<Eleveur> query = entityManager.createNamedQuery(Eleveur.FIND_ALL, Eleveur.class);
         return query.getResultList();
     }
-
-    @Override
-    public Pokemon getById(String id) {
-        return entityManager.find(Pokemon.class, id);
+    
+    public Eleveur getById(String num) {
+        return entityManager.find(Eleveur.class, num);
     }
-
-    @Override
-    public Pokemon insert(Pokemon obj) {
+    
+    
+    public Eleveur insert(Eleveur obj) {
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
         entityManager.persist(obj);
         tx.commit();
-        return entityManager.find(Pokemon.class, obj.getNom());
+        return entityManager.find(Eleveur.class, obj.getNom());
     }
-
-    @Override
-    public boolean update(Pokemon obj) {
+    
+    
+    public boolean update(Eleveur obj) {
         try {
             EntityTransaction tx = entityManager.getTransaction();
             tx.begin();
@@ -64,5 +63,6 @@ public abstract class DAO_JPA_Pokemon implements DAOPokemon {
         } catch (Exception e) {
             return false;
         }
-    }    
-}
+    } 
+	
+} // DAO_JPA_Eleveur

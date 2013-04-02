@@ -9,7 +9,7 @@ import fr.univaix.iut.pokebattle.smartcell.PokemonCaptureCell;
 public class PokemonCaptureCellTest {
 	    
 		PokemonCaptureCell cell = new PokemonCaptureCell();
-		Pokemon Magicarpe = new Pokemon ("@RamolossPiot", "Eau", "Argneu", "Rouge royal", "@Alex", "Leviator",
+		Pokemon Magicarpe = new Pokemon ("@RamolossPiot", "Eau", null, "Argneu", "Rouge royal", "@Alex", "Leviator",
 				  null, "Blourf Blourf", 129, 0, 1, 100, 100, 10, 21, 9);
 		/*
 	    @Test

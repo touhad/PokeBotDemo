@@ -1,5 +1,7 @@
 package fr.univaix.iut.pokebattle;
 
+import fr.univaix.iut.pokebattle.twitter.Tweet;
+
 public class PokemonAttaqueOtherOneCell {
 
     public String ask(Tweet question) {
@@ -10,12 +12,12 @@ public class PokemonAttaqueOtherOneCell {
 		String bits[] = Question.split("#attack");
 		String NomPokemon = bits[0]; /* NomPokemon contient le nom du pokemon qui attaque */	
 		
-    	Pokemon Attaquant = new Pokemon (NomPokemon);
+    	Pokemon Attaquant = new Pokemon ();
     	Attaquant.setNom(NomPokemon);
     
     	
     	
-    	Pokemon Defenseur = new Pokemon (NomPokemon);
+    	Pokemon Defenseur = new Pokemon ();
     	Attaquant.setNom(NomPokemon);
     	
     	

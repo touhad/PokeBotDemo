@@ -1,5 +1,12 @@
 package fr.univaix.iut.pokebattle;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
 
 @Entity
 @NamedQueries({
@@ -13,13 +20,13 @@ public class Pokemon {
 	
 	// Pour pikachu son evolution sera Raichu et sa prevolution Pichu.
     @Id
-    private String name;
+    private String Nom;
     
     @Enumerated(EnumType.STRING)
-    private Type1;
+    private String Type1;
     
     @Enumerated(EnumType.STRING)
-    private Type2;
+    private String Type2;
     
 	private String Caractere, Couleur, Eleveur, Evolution, Prevolution, Cri;	
 
@@ -28,19 +35,15 @@ public class Pokemon {
 
 	private float Taille, Poid;
 	
-	// Constructeur Pokemon
-	public Pokemon (String nom) {
-		Nom = nom;
-	} 
-	
 
-	public Pokemon (String nom, String type, String caractere, String couleur, String eleveur, String evolution,
+	public Pokemon (String nom, String type1, String type2, String caractere, String couleur, String eleveur, String evolution,
 			String prevolution, String cri, int num, int experience, int niveau, int vieMax, int vieActuel, int attaque,
 			float taille, float poid) {
 		
 
 		Nom = nom;
-		Type = type;	
+		Type1 = type1;
+		Type2 = type2;
 		Caractere = caractere;
 		Couleur = couleur;
 		Eleveur = eleveur;
@@ -57,6 +60,10 @@ public class Pokemon {
 		Poid = poid;
 	}
 	
+	public Pokemon() {
+		// TODO Auto-generated constructor stub
+	}
+
 	// Fonction qui renvoie vrai si le pokemon n'a pas de maître.
 	public boolean IsSauvage (Pokemon pokemon) {
 		
@@ -114,10 +121,10 @@ public class Pokemon {
 		Nom = nom;
 	}
 	public String getType() {
-		return Type;
+		return Type1;
 	}
 	public void setType(String type) {
-		Type = type;
+		Type1 = type;
 	}
 	public String getCaractere() {
 		return Caractere;
@@ -173,17 +180,17 @@ public class Pokemon {
 	public void setPoid(float poid) {
 		Poid = poid;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Pokemon [Nom=" + Nom + ", Type=" + Type + ", Caractere="
-				+ Caractere + ", Couleur=" + Couleur + ", Eleveur=" + Eleveur
-				+ ", Evolution=" + Evolution + ", Prevolution=" + Prevolution
-				+ ", Cri=" + Cri + ", Num=" + Num + ", Experience="
-				+ Experience + ", Niveau=" + Niveau + ", VieMax=" + VieMax
-				+ ", VieActuel=" + VieActuel + ", Attaque=" + Attaque
-				+ ", Taille=" + Taille + ", Poid=" + Poid + "]";
+		return "Pokemon [Nom=" + Nom + ", Type1=" + Type1 + ", Type2=" + Type2
+				+ ", Caractere=" + Caractere + ", Couleur=" + Couleur
+				+ ", Eleveur=" + Eleveur + ", Evolution=" + Evolution
+				+ ", Prevolution=" + Prevolution + ", Cri=" + Cri + ", Num="
+				+ Num + ", Experience=" + Experience + ", Niveau=" + Niveau
+				+ ", VieMax=" + VieMax + ", VieActuel=" + VieActuel
+				+ ", Attaque=" + Attaque + ", Taille=" + Taille + ", Poid="
+				+ Poid + "]";
 	}
-	
 	
 }
