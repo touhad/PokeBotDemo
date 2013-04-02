@@ -14,7 +14,7 @@ public class Tweet {
     }
 
     public String getScreenName() {
-        return screenName;
+        return "@" + screenName;
     }
 
     public String getText() {

@@ -1,27 +1,88 @@
 package fr.univaix.iut.pokebattle;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
+
+@Entity
+@NamedQueries({
+    @NamedQuery(name = Pokemon.FIND_ALL, query = "SELECT p FROM Pokemon p"),
+    @NamedQuery(name = Pokemon.FIND_BY_TYPE, query = "SELECT p FROM Pokemon p WHERE p.type1 = :ftype")
+})
 public class Pokemon {
-
+	
+	public static final String FIND_BY_TYPE = "findPokemonByType";
+    public static final String FIND_ALL = "findAllPokemon";
+	
 	// Pour pikachu son evolution sera Raichu et sa prevolution Pichu.
-	private String Nom, Type, Caractere, Couleur, Eleveur, Evolution, Prevolution, Cri;	
+    @Id
+    private String Nom;
+    
+    @Enumerated(EnumType.STRING)
+    private String Type1;
+    
+    @Enumerated(EnumType.STRING)
+    private String Type2;
+    
+	private String Caractere, Couleur, Eleveur, Evolution, Prevolution, Cri;	
 
-	private int Num, Experience, Niveau, VieMax, VieActuel;
+	private int Num, Experience, Niveau, VieMax, VieActuel, Attaque;
+	
+
 	private float Taille, Poid;
+	
 
-	// Constructeur Pokemon
-	public Pokemon () {
+	public Pokemon (String nom, String type1, String type2, String caractere, String couleur, String eleveur, String evolution,
+			String prevolution, String cri, int num, int experience, int niveau, int vieMax, int vieActuel, int attaque,
+			float taille, float poid) {
 		
-	} 
+
+		Nom = nom;
+		Type1 = type1;
+		Type2 = type2;
+		Caractere = caractere;
+		Couleur = couleur;
+		Eleveur = eleveur;
+		Evolution = evolution;
+		Prevolution = prevolution;
+		Cri = cri;
+		Num = num;
+		Experience = experience;
+		Niveau = niveau;
+		VieMax = vieMax;
+		VieActuel = vieActuel;
+		Attaque = attaque;
+		Taille = taille;
+		Poid = poid;
+	}
+	
+	public Pokemon() {
+		// TODO Auto-generated constructor stub
+	}
 
 	// Fonction qui renvoie vrai si le pokemon n'a pas de maître.
 	public boolean IsSauvage (Pokemon pokemon) {
+		
 		if (pokemon.getEleveur() == null)
 			return true;
 		return false;		
 	}//IsSauvage
-
+	
 
 	// Getteurs & Setteurs	
+	public int getAttaque() {
+		return Attaque;
+	}
+
+	public void setAttaque(int attaque) {
+		Attaque = attaque;
+	}
+	
+	
 	public String getCri() {
 		return Cri;
 	}
@@ -60,10 +121,10 @@ public class Pokemon {
 		Nom = nom;
 	}
 	public String getType() {
-		return Type;
+		return Type1;
 	}
 	public void setType(String type) {
-		Type = type;
+		Type1 = type;
 	}
 	public String getCaractere() {
 		return Caractere;
@@ -119,4 +180,17 @@ public class Pokemon {
 	public void setPoid(float poid) {
 		Poid = poid;
 	}
+
+	@Override
+	public String toString() {
+		return "Pokemon [Nom=" + Nom + ", Type1=" + Type1 + ", Type2=" + Type2
+				+ ", Caractere=" + Caractere + ", Couleur=" + Couleur
+				+ ", Eleveur=" + Eleveur + ", Evolution=" + Evolution
+				+ ", Prevolution=" + Prevolution + ", Cri=" + Cri + ", Num="
+				+ Num + ", Experience=" + Experience + ", Niveau=" + Niveau
+				+ ", VieMax=" + VieMax + ", VieActuel=" + VieActuel
+				+ ", Attaque=" + Attaque + ", Taille=" + Taille + ", Poid="
+				+ Poid + "]";
+	}
+	
 }

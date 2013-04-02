@@ -21,7 +21,7 @@ public class TwitterUserStreamEasyBuilder {
         this.bot = bot;
     }
 
-    public TwitterUserStreamEasy build(Credentials credentials ) {
+    public TwitterUserStreamEasy build(Credentials credentials) {
         UserStreamListener listener = new UserStreamAdapter() {
             @Override
             public void onStatus(Status status) {
