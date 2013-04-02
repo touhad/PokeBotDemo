@@ -5,7 +5,7 @@ import fr.univaix.iut.pokebattle.twitter.Tweet;
 
 public class PokemonAttackCell implements SmartCell {
 	
-	Pokemon Magicarpe = new Pokemon("@Magicarpe");
+	Pokemon Magicarpe = new Pokemon("@MagicarpePiot");
 	Pokemon Rondoudou = new Pokemon("@Rondoudou");
 
 	@Override
@@ -16,5 +16,4 @@ public class PokemonAttackCell implements SmartCell {
 		
 		return "No owner";
 	}
-
 }

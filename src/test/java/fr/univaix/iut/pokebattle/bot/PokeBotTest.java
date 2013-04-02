@@ -1,6 +1,8 @@
 package fr.univaix.iut.pokebattle.bot;
 
 import fr.univaix.iut.pokebattle.twitter.Tweet;
+
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,6 +15,7 @@ import static org.junit.Assert.assertEquals;
 public class PokeBotTest {
     PokeBot pokeBot = new PokeBot();
 
+    @Ignore
     @Test
     public void testSalut() {
         assertEquals("Carpe Carpe Magicarpe", pokeBot.ask(new Tweet("Salut")));
