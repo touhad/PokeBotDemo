@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import fr.univaix.iut.pokebattle.Pokemon;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
 
 public class PokemonAttackCellTest {
@@ -12,7 +13,7 @@ public class PokemonAttackCellTest {
 
     @Test
     public void testSalut() {
-        assertEquals("@Rondoudou #attack #trempette! /cc @PoussinPiot", cell.ask(new Tweet("@MagicarpePiot #attack #trempette! @Rondoudou")));
+        assertEquals( "@Ramoloss #attack #trempette! /cc @PoussinPiot", cell.ask(new Tweet("@MagicarpePiot #attack #trempette! @Ramoloss" )));
     }
 
 }

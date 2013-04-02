@@ -9,8 +9,8 @@ public class Pokemon {
 	private float Taille, Poid;
 
 	// Constructeur Pokemon
-	public Pokemon (String nom) {
-		Nom = nom;
+	public Pokemon () {
+		
 	} 
 
 	// Fonction qui renvoie vrai si le pokemon n'a pas de maître.
