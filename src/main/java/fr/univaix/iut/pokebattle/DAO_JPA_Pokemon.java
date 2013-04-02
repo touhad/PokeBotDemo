@@ -1,10 +1,9 @@
 package fr.univaix.iut.pokebattle;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
+import java.util.List;
 
 public abstract class DAO_JPA_Pokemon implements DAOPokemon {
 
@@ -64,5 +63,5 @@ public abstract class DAO_JPA_Pokemon implements DAOPokemon {
         } catch (Exception e) {
             return false;
         }
-    }    
+    }
 }

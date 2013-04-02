@@ -27,12 +27,12 @@ public class PokeBot implements Bot {
      */
     @Override
     public String ask(Tweet question) {
-    	for (SmartCell cell : smartCells) {
+        for (SmartCell cell : smartCells) {
             String answer = cell.ask(question);
             if (answer != null)
-                return question.getScreenName()+ " " + answer;
-            
-            
+                return question.getScreenName() + " " + answer;
+
+
         }
         return null;
     }

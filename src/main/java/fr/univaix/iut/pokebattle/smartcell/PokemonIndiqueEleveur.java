@@ -5,15 +5,15 @@ import fr.univaix.iut.pokebattle.twitter.Tweet;
 
 public class PokemonIndiqueEleveur implements SmartCell {
 
-	Pokemon Magicarpe = new Pokemon();
-	
-	@Override
-	public String ask(Tweet question) {
-		Magicarpe.setEleveur("@PoussinPiot");
-		if (Magicarpe.getEleveur() == null )
-			return "No owner";
+    Pokemon Magicarpe = new Pokemon();
 
-		return Magicarpe.getEleveur() + "is my owner";
-	}
+    @Override
+    public String ask(Tweet question) {
+        Magicarpe.setEleveur("@PoussinPiot");
+        if (Magicarpe.getEleveur() == null)
+            return "No owner";
+
+        return Magicarpe.getEleveur() + "is my owner";
+    }
 
 }
