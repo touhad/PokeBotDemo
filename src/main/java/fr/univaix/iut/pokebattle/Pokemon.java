@@ -1,5 +1,12 @@
 package fr.univaix.iut.pokebattle;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+
 
 
 @Entity
@@ -55,7 +62,11 @@ public class Pokemon {
     }
 
     public Pokemon() {
-        // TODO Auto-generated constructor stub
+       
+    }
+    public Pokemon(String name) 
+    {
+        
     }
 
     // Fonction qui renvoie vrai si le pokemon n'a pas de maître.
