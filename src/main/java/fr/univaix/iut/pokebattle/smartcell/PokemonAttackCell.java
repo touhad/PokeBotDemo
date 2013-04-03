@@ -26,7 +26,7 @@ public class PokemonAttackCell implements SmartCell {
 			String NomAttack = matcher.group(2);
 			String NomVictime = matcher.group(3);
 			
-			return "@"+ NomVictime +" #attack #" + NomAttack +" /cc "+ question.getScreenName();
+			return "@"+ NomVictime +" #attack #" + NomAttack +"! /cc "+ question.getScreenName();
 		}
 		return null;
 	}
