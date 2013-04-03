@@ -18,6 +18,12 @@ public abstract class DAO_JPA_Pokemon implements DAOPokemon {
         query.setParameter("ftype", type);
         return query.getResultList();
     }
+    
+    public Pokemon findByNom(String nom) {
+        TypedQuery<Pokemon> query = entityManager.createNamedQuery(Pokemon.FIND_BY_NOM, Pokemon.class);
+        query.setParameter("fnom", nom);
+        return query.getSingleResult();
+    }
 
     @Override
     public boolean delete(Pokemon obj) {

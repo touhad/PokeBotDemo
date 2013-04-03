@@ -6,12 +6,14 @@ import javax.persistence.*;
 @Entity
 @NamedQueries({
         @NamedQuery(name = Pokemon.FIND_ALL, query = "SELECT p FROM Pokemon p"),
-        @NamedQuery(name = Pokemon.FIND_BY_TYPE, query = "SELECT p FROM Pokemon p WHERE p.type1 = :ftype")
+        @NamedQuery(name = Pokemon.FIND_BY_TYPE, query = "SELECT p FROM Pokemon p WHERE p.type1 = :ftype"),
+        @NamedQuery(name = Eleveur.FIND_BY_NOM, query = "SELECT p FROM Pokemon p WHERE p.Nom = :fnom")
 })
 public class Pokemon {
 
     public static final String FIND_BY_TYPE = "findPokemonByType";
     public static final String FIND_ALL = "findAllPokemon";
+    public static final String FIND_BY_NOM = "findPokemonByNom";
 
     // Pour pikachu son evolution sera Raichu et sa prevolution Pichu.
     @Id
@@ -23,12 +25,27 @@ public class Pokemon {
     @Enumerated(EnumType.STRING)
     private String Type2;
 
-    private String Caractere, Couleur, Eleveur, Evolution, Prevolution, Cri;
+    private String Caractere;
+    private String Couleur;
+    private String Eleveur;
+    private String Evolution;
+    private String Prevolution;
+    private String Cri;
 
-    private int Num, Experience, Niveau, VieMax, VieActuel, Attaque;
+    private int Num;
+    private int Experience;
+    private int Niveau;
+    private int VieMax;
+    private int VieActuel;
+    private int Attaque;
 
 
-    private float Taille, Poid;
+    private float Taille;
+    private float Poid;
+    
+    public Pokemon() {
+        // TODO Auto-generated constructor stub
+    }
 
 
     public Pokemon(String nom, String type1, String type2, String caractere, String couleur, String eleveur, String evolution,
@@ -53,10 +70,6 @@ public class Pokemon {
         Attaque = attaque;
         Taille = taille;
         Poid = poid;
-    }
-
-    public Pokemon() {
-        // TODO Auto-generated constructor stub
     }
 
     // Fonction qui renvoie vrai si le pokemon n'a pas de maître.
