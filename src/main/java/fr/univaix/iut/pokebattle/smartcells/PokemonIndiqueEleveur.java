@@ -1,9 +1,10 @@
-package fr.univaix.iut.pokebattle.smartcell;
+package fr.univaix.iut.pokebattle.smartcells;
 
 import fr.univaix.iut.pokebattle.Pokemon;
+import fr.univaix.iut.pokebattle.smartcell.SmartCell;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
 
-public class PokemonOwnerCell implements SmartCell {
+public class PokemonIndiqueEleveur implements SmartCell {
 
 	Pokemon Magicarpe = new Pokemon("@MagicarpePiot");
 	
@@ -22,5 +23,4 @@ public class PokemonOwnerCell implements SmartCell {
     	}
     	return null;
 	}
-
 }

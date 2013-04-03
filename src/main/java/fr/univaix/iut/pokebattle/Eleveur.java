@@ -15,7 +15,8 @@ public class Eleveur {
 
     // Les points sont l'experience aquise par le dresseur.
     private String Nom;
-    private int Num, Pts;
+    private int Num;
+    private int Pts;
 
     // Constructeur Eleveur
     public Eleveur(String nom) {
