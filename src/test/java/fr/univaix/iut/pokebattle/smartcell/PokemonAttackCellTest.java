@@ -12,7 +12,7 @@ public class PokemonAttackCellTest {
 	PokemonAttackCell cell = new PokemonAttackCell();
 
     @Test
-    public void testSalut() {
+    public void testAttack() {
         assertEquals("@Ramoloss #attack #trempette! /cc @PoussinPiot", 
         		cell.ask(new Tweet("PoussinPiot", "@MagicarpePiot #attack #trempette @Ramoloss")));
     }

@@ -1,5 +1,8 @@
 package fr.univaix.iut.pokebattle.smartcell;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import fr.univaix.iut.pokebattle.Pokemon;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
 
@@ -17,7 +20,7 @@ public class PokemonOwnerCell implements SmartCell {
 			if (Magicarpe.getEleveur() == null )
 				return "No owner";
 		
-			return Magicarpe.getEleveur() + "is my owner" ;
+			return Magicarpe.getEleveur() + " is my owner" ;
 	
     	}
     	return null;
