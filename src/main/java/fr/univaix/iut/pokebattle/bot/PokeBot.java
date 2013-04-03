@@ -13,13 +13,13 @@ public class PokeBot implements Bot {
      */
     final SmartCell[] smartCells = new SmartCell[]{
 
-            new PokemonOwnerCell(),
+            //new PokemonOwnerCell(),
 
             new PokemonCaptureCell(),
 
-            /*new PokemonCaptureCell(),
+            new PokemonCaptureCell(),
             new PokemonCriesGeneCell(),
-            new PokemonAttackCell(),*/
+            new PokemonAttackCell(),
             new PokemonCriesCell()
     };
 
