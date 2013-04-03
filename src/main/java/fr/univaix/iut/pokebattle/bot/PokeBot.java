@@ -14,10 +14,9 @@ public class PokeBot implements Bot {
     final SmartCell[] smartCells = new SmartCell[]{
 
             new PokemonOwnerCell(),
-            new PokemonIndiqueEleveur(),
-            new PokemonCaptureCell(),
+            /*new PokemonCaptureCell(),
             new PokemonCriesGeneCell(),
-            new PokemonAttackCell(),
+            new PokemonAttackCell(),*/
             new PokemonCriesCell()
     };
 
