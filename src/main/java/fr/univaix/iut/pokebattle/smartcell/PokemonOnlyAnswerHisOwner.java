@@ -10,9 +10,9 @@ public class PokemonOnlyAnswerHisOwner implements SmartCell {
 	public String ask(Tweet question) {
 		String Interloc = question.getScreenName();
 		if (Magicarpe.getEleveur() != Interloc)
-			return "@" + Interloc + " " + "@" + Magicarpe.getEleveur() + " is my owner";
+			return Magicarpe.getEleveur() + " is my owner";
 		
-		return "@" + Interloc + " " + "@" + Magicarpe.getEleveur() + " is my owner";
+		return Magicarpe.getEleveur() + " is my owner";
 					
 	        
 	    }

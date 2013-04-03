@@ -13,7 +13,12 @@ public class PokemonAttackCellTest {
 
     @Test
     public void testSalut() {
-        assertEquals("@Ramoloss #attack #trempette! /cc @PoussinPiot", cell.ask(new Tweet("PoussinPiot","@MagicarpePiot #attack #trempette! @Ramoloss")));
+
+        assertEquals("@Ramoloss #attack #trempette! /cc @PoussinPiot", cell.ask(new Tweet("PoussinPiot","@MagicarpePiot #attack #trempette @Ramoloss")));
+
+        assertEquals("@Ramoloss #attack #trempette! /cc @PoussinPiot", 
+        		cell.ask(new Tweet("PoussinPiot", "@MagicarpePiot #attack #trempette @Ramoloss")));
+
     }
 
 }
