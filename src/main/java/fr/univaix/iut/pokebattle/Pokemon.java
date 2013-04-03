@@ -1,6 +1,5 @@
 package fr.univaix.iut.pokebattle;
 
-import javax.persistence.*;
 
 
 @Entity
