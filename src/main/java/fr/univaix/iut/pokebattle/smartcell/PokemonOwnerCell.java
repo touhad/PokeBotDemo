@@ -10,7 +10,7 @@ public class PokemonOwnerCell implements SmartCell {
     @Override
     public String ask(Tweet question) {
         Magicarpe.setEleveur("@PoussinPiot");
-        if (Magicarpe.getEleveur() == null)
+        if (Magicarpe.getEleveur() == null )
             return "No owner";
 
         return Magicarpe.getEleveur() + " is my owner";

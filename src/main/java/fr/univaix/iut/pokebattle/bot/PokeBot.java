@@ -1,5 +1,7 @@
 package fr.univaix.iut.pokebattle.bot;
 
+import java.util.Date;
+
 import fr.univaix.iut.pokebattle.smartcell.*;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
 
@@ -19,18 +21,16 @@ public class PokeBot implements Bot {
             new PokemonCriesCell()
     };
 
-    /**
-     * Ask something to Bot, it will respond to you.
-     *
-     * @param question The question you ask.
-     * @return An answer... or null if it doesn't get it.
-     */
+    Date DateTweet = new Date ();
     @Override
     public String ask(Tweet question) {
         for (SmartCell cell : smartCells) {
             String answer = cell.ask(question);
             if (answer != null)
-                return question.getScreenName() + " " + answer;
+                return question.getScreenName() + " "+ answer + "       // à : " 
+                								+ DateTweet.getHours() + ":" 
+                								+ DateTweet.getMinutes() + ":"
+                								+ DateTweet.getSeconds();
 
 
         }
