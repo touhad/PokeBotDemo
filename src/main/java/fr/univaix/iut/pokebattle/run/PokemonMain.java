@@ -10,8 +10,8 @@ public class PokemonMain
 {
 	String Properties = new String ("twitter4j.properties");
 	
-	
-	public String Prop (Tweet question)
+	 
+	public String Prop (Pokemon poke)
 	{
 		String NomPokemon = new String ();
 		Pattern pattern = Pattern.compile("@([^ ]+)");
@@ -26,8 +26,9 @@ public class PokemonMain
 	}
 	//Regarder tweet, extraire nom pokemon, appeler properties qui va bien
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
     	
-        BotRunner.runBot(new PokeBot(), Prop(question)); // problème, comment récupérer le tweet de façon effective ?
+        BotRunner.runBot(new PokeBot(), Prop(ask(question))); // problème, comment récupérer le tweet de façon effective ?
     }
 }
