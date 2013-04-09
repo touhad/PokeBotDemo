@@ -1,19 +1,18 @@
 package fr.univaix.iut.pokebattle.run;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import fr.univaix.iut.pokebattle.bot.PokeBot;
-import fr.univaix.iut.pokebattle.smartcell.SmartCell;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
 
-public class PokemonMain implements SmartCell
+public class PokemonMain
 {
 	Properties Prop = new Properties ();
-	@Override
-	public String ask(Tweet question) {
+	
+	public String ask(Tweet question)
+	{
 		
-		return null;
+		String PropFile = Prop.ask(question);
+		return PropFile;
+
 	}
 
 	
@@ -22,9 +21,10 @@ public class PokemonMain implements SmartCell
 
 	public static void main(String[] args) 
 	{
-    	
-        BotRunner.runBot(new PokeBot(), Prop); // problème, comment récupérer le tweet de façon effective ?
-    }
+		
+			BotRunner.runBot(new PokeBot(), PropFile); 
+		
+	}
 
 	
 	
