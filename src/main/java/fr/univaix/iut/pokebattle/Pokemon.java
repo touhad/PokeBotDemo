@@ -1,12 +1,6 @@
 package fr.univaix.iut.pokebattle;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-
+import javax.persistence.*;
 
 
 @Entity
@@ -49,7 +43,9 @@ public class Pokemon {
     private float Taille;
     private float Poid;
     
-    
+    public Pokemon() {
+        // TODO Auto-generated constructor stub
+    }
 
 
     public Pokemon(String nom, String type1, String type2, String caractere, String couleur, String eleveur, String evolution,
@@ -74,14 +70,6 @@ public class Pokemon {
         Attaque = attaque;
         Taille = taille;
         Poid = poid;
-    }
-
-    public Pokemon() {
-       
-    }
-    public Pokemon(String name) 
-    {
-        
     }
 
     // Fonction qui renvoie vrai si le pokemon n'a pas de maître.

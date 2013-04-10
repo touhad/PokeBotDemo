@@ -20,13 +20,13 @@ public class PokemonAttackCell implements SmartCell {
 		Matcher matcher = pattern.matcher(question.getText());
 		
 		// Si le match marche et que le ScreenName n'est pas null alors on fait le if
-		if(matcher.find() && question.getScreenName() != null){
+		if(matcher.matches() && question.getScreenName() != null){
 			// On fait correspondre les groupes avec "@bulbizare1(groupe 1) #attack #foudre(groupe 2)! /cc @pcreux(groupe 3)"
 			String NomPokemon = matcher.group(1); 
 			String NomAttack = matcher.group(2);
 			String NomVictime = matcher.group(3);
 			
-			return "@"+ NomVictime +" #attack #" + NomAttack +"! /cc "+ question.getScreenName();
+			return "@"+ NomVictime +" #attack #" + NomAttack +" /cc "+ question.getScreenName();
 		}
 		return null;
 	}

@@ -11,6 +11,9 @@ public class PokemonInterlocCell implements SmartCell {
         return "Pika pika";
     }
 
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
+    }
 
 }

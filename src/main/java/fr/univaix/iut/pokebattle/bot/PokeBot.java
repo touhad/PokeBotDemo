@@ -14,12 +14,11 @@ public class PokeBot implements Bot {
     final SmartCell[] smartCells = new SmartCell[]{
 
             new PokemonOwnerCell(),
-
-
-           // new PokemonCaptureCell(),
-            
-            new PokemonAttackCell(),
+            new PokemonIndiqueEleveur(),
+            new PokemonCaptureCell(),
             new PokemonCriesGeneCell(),
+            new PokemonAttackCell(),
+            new PokemonCriesCell()
     };
 
     Date DateTweet = new Date ();
