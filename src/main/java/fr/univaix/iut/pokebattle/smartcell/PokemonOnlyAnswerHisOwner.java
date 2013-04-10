@@ -1,18 +1,34 @@
 package fr.univaix.iut.pokebattle.smartcell;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import fr.univaix.iut.pokebattle.Pokemon;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
 
 public class PokemonOnlyAnswerHisOwner implements SmartCell {
 		
-		Pokemon Magicarpe = new Pokemon ();
 		
 	public String ask(Tweet question) {
-		String Interloc = question.getScreenName();
-		if (Magicarpe.getEleveur() != Interloc)
-			return Magicarpe.getEleveur() + " is my owner";
 		
-		return Magicarpe.getEleveur() + " is my owner";
+		Pattern pattern = Pattern.compile("@([^ ]+) #attack #([^ ]+) @([^ ]+)");
+		Matcher matcher = pattern.matcher(question.getText());
+		
+		if (matcher.matches() && question.getScreenName() != null)
+		{
+			String NomPokemon = matcher.group(1); 
+			String NomAttack = matcher.group(2);
+			String NomVictime = matcher.group(3);
+			
+			if (question.getScreenName() != )
+				return question.getScreenName() + + " is my owner";
+			
+			PokemonAttackCell();
+		}
+		
+			
+		
+		
 					
 	        
 	    }

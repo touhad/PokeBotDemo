@@ -17,7 +17,7 @@ public class PokemonOwnerCell implements SmartCell {
 			if (Magicarpe.getEleveur() == null )
 				return "No owner";
 		
-			return Magicarpe.getEleveur() + "is my owner" ;
+			return Magicarpe.getEleveur() + " is my owner" ;
 	
     	}
     	return null;

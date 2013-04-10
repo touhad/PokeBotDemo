@@ -8,7 +8,7 @@ public class PokemonOnlyAnswerHisOwnerTest {
     
     
     public void TestRep () {
-    	assertEquals ("@PoussinPiot" , cell.ask(new Tweet("@RamolossPiot #attack #trempette @MagicarpePiot")));
+    	assertEquals ("PoussinPiot" , cell.ask(new Tweet("@RamolossPiot #attack #trempette @MagicarpePiot")));
     }
 
     
