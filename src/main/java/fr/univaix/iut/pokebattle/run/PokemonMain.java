@@ -9,24 +9,15 @@ public class PokemonMain
 {
 	
 	
-/*	File[] fichiersJava = res.listFiles(new FilenameFilter()
-	{
-		public boolean accept(File dir) 
-		{
-		  String name = new String();
-		  return name.endsWith(".properties");
-		}
-	});	  */  
+	private static String[] fileList = {"Magicarpe.properties", 
+		"Ramoloss.properties",
+		
+		};
     public static void main(String[] args) 
     {
-    	File res = new File("resources");
-    	for (File PropFile : res.listFiles())
+    	for (String credentialsFileName : fileList)
     	{
-    		String Prop = new String (PropFile.getName());
-    		BotRunner.runBot(new PokeBot(), Prop);
-    	
-    	//BotRunner.runBot(new PokeBot(), "Magicarpe.properties");
-        //BotRunner.runBot(new PokeBot(), "Ramoloss.properties");
+    		BotRunner.runBot(new PokeBot(), credentialsFileName);
     	}
     }
 }
