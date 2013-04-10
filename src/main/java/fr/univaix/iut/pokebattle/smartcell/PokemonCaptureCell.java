@@ -28,7 +28,7 @@ public class PokemonCaptureCell implements SmartCell {
                 Ramoloss.setEleveur(NomEleveur);
         }
 
-        return "@" + NomEleveur + " " + "@" + Ramoloss.getEleveur() + " is my owner";
+        return "@" + NomEleveur + " " /*+ "@" */+ Ramoloss.getEleveur() + " is my owner";
 
     }
 
