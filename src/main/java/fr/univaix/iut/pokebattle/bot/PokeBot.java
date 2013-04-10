@@ -15,12 +15,11 @@ public class PokeBot implements Bot {
 
             new PokemonOwnerCell(),
 
-            new PokemonCaptureCell(),
 
-            /*new PokemonCaptureCell(),
+           // new PokemonCaptureCell(),
+            
+            new PokemonAttackCell(),
             new PokemonCriesGeneCell(),
-            new PokemonAttackCell(),*/
-            new PokemonCriesCell()
     };
 
     Date DateTweet = new Date ();
