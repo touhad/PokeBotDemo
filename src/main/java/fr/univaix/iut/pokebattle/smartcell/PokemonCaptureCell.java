@@ -10,8 +10,7 @@ public class PokemonCaptureCell implements SmartCell {
 
         String Question = question.getText(); // Question contient le Tweet
         String NomEleveur = question.getScreenName(); //Contiens le nom du twitteur
-        Pokemon Ramoloss = new Pokemon("@RamolossPiot", "Eau", null, "Argneu", "Rouge royal", null, "Flagados",
-                null, "Blourf Blourf", 129, 0, 1, 100, 100, 10, 21, 9);
+        Pokemon Ramoloss = new Pokemon();
 
 		/* TO-DO 
          * -Récupérer le nom du pokemon
@@ -28,8 +27,15 @@ public class PokemonCaptureCell implements SmartCell {
                 Ramoloss.setEleveur(NomEleveur);
         }
 
-        return "@" + NomEleveur + " " /*+ "@" */+ Ramoloss.getEleveur() + " is my owner";
+        return "@" + NomEleveur + " " + "@" + Ramoloss.getEleveur() + " is my owner";
 
     }
 
 }
+
+
+
+
+
+
+

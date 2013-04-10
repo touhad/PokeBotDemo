@@ -5,7 +5,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public class DAO_JPA_Eleveur {
+public class DAO_JPA_Eleveur implements DAOEleveur{
 
     private EntityManager entityManager;
 
