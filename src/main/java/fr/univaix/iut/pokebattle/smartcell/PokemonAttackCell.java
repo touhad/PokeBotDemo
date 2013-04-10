@@ -12,7 +12,8 @@ public class PokemonAttackCell implements SmartCell {
 	@Override
 	public String ask(Tweet question) {
 		// On créé un  pattern qui correspond à l'exprssion de la question de l'éléveur
-		Pattern pattern = Pattern.compile("@([^ ]+) #attack #([^ ]+) @([^ ]+)");
+		//"@bulbizare1 #attack #charge @pikachuNyanNian /cc @nedseb @viviane"
+		Pattern pattern = Pattern.compile("@([^ ]+) #attack #([^ ]+) @([^ ]+) /cc @([^ ]+) @([^ ]+)");
 		
 		// On match le pattern pour récupérer les groupes de l'expression
 		// Tout ce qui est entre parenthèses correspond à un groupe
@@ -25,8 +26,11 @@ public class PokemonAttackCell implements SmartCell {
 			String NomPokemon = matcher.group(1); 
 			String NomAttack = matcher.group(2);
 			String NomVictime = matcher.group(3);
-			
-			return "@"+ NomVictime +" #attack #" + NomAttack +"! /cc "+ question.getScreenName();
+			String NomDresseurVictime = matcher.group(4);
+			String NomJuge = matcher.group(5);
+			if(!NomPokemon.equals(question.getPokemonName()))
+				return null;
+			return "@"+ NomVictime +" #attack #" + NomAttack +"! /cc @"+ NomDresseurVictime +" "+question.getScreenName() +" @"+ NomJuge;
 		}
 		return null;
 	}

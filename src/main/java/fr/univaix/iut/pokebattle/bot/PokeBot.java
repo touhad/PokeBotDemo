@@ -24,16 +24,17 @@ public class PokeBot implements Bot {
 
     Date DateTweet = new Date ();
     @Override
-    public String ask(Tweet question) {
-        for (SmartCell cell : smartCells) {
+    public String ask(Tweet question) 
+    {
+        for (SmartCell cell : smartCells)
+        {
             String answer = cell.ask(question);
             if (answer != null)
-                return question.getScreenName() + " "+ answer + "       // à : " 
-                								+ DateTweet.getHours() + ":" 
-                								+ DateTweet.getMinutes() + ":"
-                								+ DateTweet.getSeconds();
-
-
+            	return answer + "       // à : " 
+							+ DateTweet.getHours() + ":" 
+							+ DateTweet.getMinutes() + ":"
+							+ DateTweet.getSeconds();
+             
         }
         return null;
     }
