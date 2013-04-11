@@ -9,8 +9,10 @@ public class PokemonMain
 {
 	
 	
-	private static String[] fileList = {"Magicarpe.properties", 
-		"Ramoloss.properties",
+	private static String[] fileList = {"Ramoloss.properties", 
+		"Magicarpe.properties",
+		"Chrysacier.properties",
+		
 		
 		};
     public static void main(String[] args) 
