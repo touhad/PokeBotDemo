@@ -15,7 +15,6 @@ public class PokeBot implements Bot {
 
             //new PokemonOwnerCell(),
 
-
            // new PokemonCaptureCell(),
             
             new PokemonAttackCell(),
