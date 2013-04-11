@@ -25,6 +25,7 @@ public class PokemonCriesCell implements SmartCell {
         Pokemon pokemon = DAO.findByNom("RamolossPiot");
         
         String Cri = pokemon.getCri();
+
         System.out.println(Cri);
         
         return Cri;
