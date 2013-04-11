@@ -56,7 +56,6 @@ public class PokemonCriesCellTest {
 	@Test
 	public void test() throws DatabaseUnitException {
 		assertEquals("@PoussinPiot Ramo-Ramoloss",
-
 				cell.ask(new Tweet("@RamolossPiot Miaou"))); 
 	}
 
