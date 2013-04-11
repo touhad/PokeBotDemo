@@ -14,6 +14,7 @@ public class TestTweet {
         Tweet tweet2 = new Tweet("coucou !");
         assertEquals("@" + null, tweet2.getScreenName());
         assertEquals("coucou !", tweet2.getText());
+        assertEquals("bonjour !", tweet2.getText());
 
     }
 
