@@ -28,10 +28,10 @@ public class PokeBot implements Bot {
         for (SmartCell cell : smartCells) {
             String answer = cell.ask(question);
             if (answer != null)
-                return question.getScreenName() + " "+ answer + "       // à : " 
-                								+ DateTweet.getHours() + ":" 
-                								+ DateTweet.getMinutes() + ":"
-                								+ DateTweet.getSeconds();
+                return  answer + "       // à : " 
+                		+ DateTweet.getHours() + ":" 
+                		+ DateTweet.getMinutes() + ":"
+                		+ DateTweet.getSeconds();
 
 
         }

@@ -10,17 +10,17 @@ public class PokemonCriesGeneCell implements SmartCell {
     public String ask(Tweet question) {
 
 
-        return "Carpe Carpe Magicarpe";
+        return question.getScreenName() +"Carpe Carpe Magicarpe";
     }
 
 
-    private String extractName(Tweet question) {
-
-        String q = new String(question.getText());
-        String bits[] = q.split("Salut ");
-        String name = bits[bits.length - 1];
-
-        return name;
-    }
+    //private String extractName(Tweet question) {
+    //
+    //    String q = new String(question.getText());
+    //    String bits[] = q.split("Salut ");
+    //    String name = bits[bits.length - 1];
+    //
+    //    return name;
+    //}
 
 }
