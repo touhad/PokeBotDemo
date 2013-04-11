@@ -86,6 +86,26 @@
             <artifactId>tuse-core</artifactId>
             <version>0.0.2-SNAPSHOT</version>
         </dependency>
+
+<dependency>
+    <groupId>org.dbunit</groupId>
+    <artifactId>dbunit</artifactId>
+    <version>2.4.9</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+  <groupId>org.apache.derby</groupId>
+  <artifactId>derby</artifactId>
+  <version>10.9.1.0</version>
+  <scope>test</scope>
+</dependency>   
+<dependency>
+  <groupId>org.apache.derby</groupId>
+  <artifactId>derbyclient</artifactId>
+  <version>10.9.1.0</version>
+  <scope>test</scope>
+</dependency>
     </dependencies>
 
     <repositories>

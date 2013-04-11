@@ -1,0 +1,5 @@
+<dataset>
+    <POKEMON Nom="RamolossPiot" Type1="Normal" Type2="Psy" Caractere="Malsain" Couleur="Rose bonbon" Eleveur="PoussinPiot" Evolution="Flagadoss"
+	Prevolution="null" Cri="Ramo-Ramoloss" Num="123" Experience="0" Niveau="1" VieMax="100" VieActuel="100" Attaque="10" Taille="41" Poid="40"
+	/>
+</dataset>

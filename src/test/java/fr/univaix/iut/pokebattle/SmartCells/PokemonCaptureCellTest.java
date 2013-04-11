@@ -5,9 +5,9 @@ import fr.univaix.iut.pokebattle.Pokemon;
 public class PokemonCaptureCellTest {
 
 	PokemonCaptureCellTest cell = new PokemonCaptureCellTest();
-	Pokemon Magicarpe = new Pokemon("@RamolossPiot", "Eau", null, "Argneu",
+	/*Pokemon Magicarpe = new Pokemon("@RamolossPiot", "Eau", null, "Argneu",
 			"Rouge royal", "@Alex", "Leviator", null, "Blourf Blourf", 129, 0,
-			1, 100, 100, 10, 21, 9);
+			1, 100, 100, 10, 21, 9);*/
 	/*
 	 * @Test public void testCapturePokemon() { <<<<<<< HEAD
 	 * assertEquals("@AlexPanizziG4 @Alex is my Owner", cell.ask(new

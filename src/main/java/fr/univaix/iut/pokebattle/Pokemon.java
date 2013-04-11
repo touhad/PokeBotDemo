@@ -6,9 +6,9 @@ import javax.persistence.*;
 @Entity
 @NamedQueries({
         @NamedQuery(name = Pokemon.FIND_ALL, query = "SELECT p FROM Pokemon p"),
-        @NamedQuery(name = Pokemon.FIND_BY_TYPE, query = "SELECT p FROM Pokemon p WHERE p.type1 = :ftype"),
-        @NamedQuery(name = Eleveur.FIND_BY_NOM, query = "SELECT p FROM Pokemon p WHERE p.Nom = :fnom")
-})
+        @NamedQuery(name = Pokemon.FIND_BY_TYPE, query = "SELECT p FROM Pokemon p WHERE p.Type1 = :ftype OR p.Type2 = :ftype"),
+        @NamedQuery(name = Pokemon.FIND_BY_NOM, query = "SELECT p FROM Pokemon p WHERE p.Nom = :fnom")
+}) 
 public class Pokemon {
 
     public static final String FIND_BY_TYPE = "findPokemonByType";
@@ -18,11 +18,11 @@ public class Pokemon {
     // Pour pikachu son evolution sera Raichu et sa prevolution Pichu.
     @Id
     private String Nom;
-
-    @Enumerated(EnumType.STRING)
+ 
+    /* @Enumerated(EnumType.STRING) */
     private String Type1;
 
-    @Enumerated(EnumType.STRING)
+    /* @Enumerated(EnumType.STRING) */
     private String Type2;
 
     private String Caractere;
@@ -45,31 +45,6 @@ public class Pokemon {
     
     public Pokemon() {
         // TODO Auto-generated constructor stub
-    }
-
-
-    public Pokemon(String nom, String type1, String type2, String caractere, String couleur, String eleveur, String evolution,
-                   String prevolution, String cri, int num, int experience, int niveau, int vieMax, int vieActuel, int attaque,
-                   float taille, float poid) {
-
-
-        Nom = nom;
-        Type1 = type1;
-        Type2 = type2;
-        Caractere = caractere;
-        Couleur = couleur;
-        Eleveur = eleveur;
-        Evolution = evolution;
-        Prevolution = prevolution;
-        Cri = cri;
-        Num = num;
-        Experience = experience;
-        Niveau = niveau;
-        VieMax = vieMax;
-        VieActuel = vieActuel;
-        Attaque = attaque;
-        Taille = taille;
-        Poid = poid;
     }
 
     // Fonction qui renvoie vrai si le pokemon n'a pas de maître.

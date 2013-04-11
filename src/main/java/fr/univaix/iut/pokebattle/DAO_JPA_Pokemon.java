@@ -5,11 +5,11 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-public abstract class DAO_JPA_Pokemon implements DAOPokemon {
+public class DAO_JPA_Pokemon implements DAOPokemon {
 
     private EntityManager entityManager;
 
-    public DAO_JPA_Pokemon(EntityManager entityManager) {
+    public DAO_JPA_Pokemon(EntityManager entityManager) {  
         this.entityManager = entityManager;
     }
 
@@ -26,7 +26,7 @@ public abstract class DAO_JPA_Pokemon implements DAOPokemon {
     }
 
     @Override
-    public boolean delete(Pokemon obj) {
+    public boolean delete(Pokemon obj) {  
         try {
             EntityTransaction tx = entityManager.getTransaction();
             tx.begin();
