@@ -24,7 +24,7 @@ import fr.univaix.iut.pokebattle.twitter.Tweet;
 
 public class PokemonCriesCellTest {
 
-	PokemonCriesCell cell = new PokemonCriesCell();
+	PokemonCriesGeneCell cell = new PokemonCriesGeneCell();
 	
 	private static EntityManager entityManager;
     private static FlatXmlDataSet dataset;

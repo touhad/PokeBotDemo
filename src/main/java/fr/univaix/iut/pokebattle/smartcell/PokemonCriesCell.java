@@ -19,7 +19,7 @@ public class PokemonCriesCell implements SmartCell {
 	
     public String ask(Tweet question) {
     	
-    	/* Remplacer le findbynom("ramolosspiot") par le nom récupéré par un split */
+    	
     	
         DAOPokemon DAO = DAOFactoryJPA.createDAOPokemon();
         Pokemon pokemon = DAO.findByNom("RamolossPiot");
