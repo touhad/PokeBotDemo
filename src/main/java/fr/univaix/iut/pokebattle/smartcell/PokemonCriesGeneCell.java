@@ -29,7 +29,4 @@ public class PokemonCriesGeneCell implements SmartCell {
 
         return Twitteur + " " + Cri + ".."  ;
     }
-
-
-
 }
