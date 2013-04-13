@@ -1,19 +1,21 @@
 package fr.univaix.iut.pokebattle;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
 @Entity
 @NamedQueries({
         @NamedQuery(name = Eleveur.FIND_ALL, query = "SELECT e FROM Eleveur e"),
-        @NamedQuery(name = Eleveur.FIND_BY_NOM, query = "SELECT e FROM Eleveur e WHERE e.nom = :fnom")})
+        @NamedQuery(name = Eleveur.FIND_BY_NOM, query = "SELECT e FROM Eleveur e WHERE e.Nom = :fnom")})
 public class Eleveur {
 
     public static final String FIND_BY_NOM = "findEleveurByNom";
     public static final String FIND_ALL = "findAllEleveur";
 
     // Les points sont l'experience aquise par le dresseur.
+    @Id
     private String Nom;
     private int Num;
     private int Pts;
@@ -22,7 +24,9 @@ public class Eleveur {
     public Eleveur(String nom) {
         Nom = nom;
     }
-
+    
+    public Eleveur () {};
+    
     public Eleveur(String nom, int num, int pts) {
         Nom = nom;
         Num = num;

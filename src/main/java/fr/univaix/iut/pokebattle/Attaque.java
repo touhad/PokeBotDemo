@@ -1,13 +1,16 @@
 package fr.univaix.iut.pokebattle;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = Pokemon.FIND_ALL, query = "SELECT a FROM Attaque a"),
-        @NamedQuery(name = Pokemon.FIND_BY_TYPE, query = "SELECT a FROM Attaque a WHERE a.Type1 = :ftype OR a.Type2 = :ftype"),
-        @NamedQuery(name = Eleveur.FIND_BY_NOM, query = "SELECT a FROM Attaque a WHERE a.Nom = :fnom")
+        @NamedQuery(name = Attaque.FIND_ALL, query = "SELECT a FROM Attaque a"),
+        @NamedQuery(name = Attaque.FIND_BY_TYPE, query = "SELECT a FROM Attaque a WHERE a.TypeAttaque = :ftype"),
+        @NamedQuery(name = Attaque.FIND_BY_NOM, query = "SELECT a FROM Attaque a WHERE a.NomAttaque = :fnom")
 })
 
 public class Attaque {
@@ -15,7 +18,7 @@ public class Attaque {
     public static final String FIND_BY_TYPE = "findAttaqueByType";
     public static final String FIND_ALL = "findAllAttaque";
     public static final String FIND_BY_NOM = "findAttaqueByNom";
-    
+    @Id
     private String NomAttaque;
     private String TypeAttaque;
     

@@ -1,9 +1,10 @@
 package fr.univaix.iut.pokebattle;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
-import java.util.List;
 
 public class DAO_JPA_Pokemon implements DAOPokemon {
 
@@ -70,4 +71,10 @@ public class DAO_JPA_Pokemon implements DAOPokemon {
             return false;
         }
     }
+
+	@Override
+	public Pokemon findByNom(String nom) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

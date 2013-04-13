@@ -33,7 +33,7 @@ public class PokeBot implements Bot {
 	@BeforeClass
 	public static void initTestFixture() throws Exception {
 	    // Get the entity manager for the tests.
-	    entityManagerFactory = Persistence.createEntityManagerFactory("pokebattlePUTest");
+	    entityManagerFactory = Persistence.createEntityManagerFactory("pokebattlePU");
 	    entityManager = entityManagerFactory.createEntityManager();
 
 	    DAOFactoryJPA.setEntityManager(entityManager);
