@@ -210,7 +210,34 @@ public class Pokemon {
     public void setPoid(float poid) {
         Poid = poid;
     }
+    
+    public void getStat(String NomPokemon, String Stat)
+    {   
+         Pokemon Poke = "SELECT p FROM Pokemon p WHERE p.Nom = " + NomPokemon; // C'est ce que j'aimerais pouvoir faire
+         
+        switch (Stat) 
+        {
 
+            case Stat.equals ("level") : return Poke.getLevel()+ " ";
+        
+            break;
+
+            case Stat.equals ("XP") : return Poke.getExperience()+ " ";
+ 
+            break;
+
+            case Stat.equals ("PV") : return Poke.getVieActuel()+ " ";
+        
+            break;
+
+            case Stat.equals ("type") : return Poke.getType()+ " ";
+ 
+            break;
+            
+            //autres stats...
+        }//switch
+    }
+    
     @Override
     public String toString() {
         return "Pokemon [Nom=" + Nom + ", Type1=" + Type1 + ", Type2=" + Type2
