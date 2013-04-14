@@ -26,7 +26,6 @@ public class PokemonAttackCellTest {
 	
 	private static EntityManager entityManager;
     private static FlatXmlDataSet dataset;
-    private static FlatXmlDataSet datasetATTAQUE;
     private static DatabaseConnection dbUnitConnection;
 
     private static EntityManagerFactory entityManagerFactory;

@@ -18,8 +18,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import fr.univaix.iut.pokebattle.DAOFactoryJPA;
-import fr.univaix.iut.pokebattle.DAOPokemon;
-import fr.univaix.iut.pokebattle.Pokemon;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
 
 public class PokemonKOCellTest {
@@ -52,6 +50,7 @@ public class PokemonKOCellTest {
 	    //Clean the data from previous test and insert new data test.
 	    DatabaseOperation.CLEAN_INSERT.execute(dbUnitConnection, dataset);
 	}
+	
 	
     @Test
     public void testNotKo() {

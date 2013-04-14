@@ -28,7 +28,6 @@ public class PokemonKOCell implements SmartCell {
 			// On fait correspondre les groupes avec "@pikachuNyanNian(groupe 1) #attack #charge(groupe 2)! /cc @nedseb(groupe 3) @pcreux(groupe 4) @viviane(groupe 5)"
 			
 			String NomPokemon = matcher.group(1);	//Nom du pokemon attaqué (victime)
-			String Degat = matcher.group(2);		//Dégat de l'attaque lancé
 			String EleveurV = matcher.group(3);		//Nom de l'éleveur du pokemon attaqué
 	        String EleveurA = matcher.group(4);		//Nom de l'éleveur du pokemon attaquant
 	        String Juge = question.getScreenName(); //Nom du juge
