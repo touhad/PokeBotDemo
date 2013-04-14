@@ -12,6 +12,7 @@ import javax.persistence.NamedQuery;
         @NamedQuery(name = Pokemon.FIND_BY_TYPE, query = "SELECT p FROM Pokemon p WHERE p.Type1 = :ftype OR p.Type2 = :ftype"),
         @NamedQuery(name = Pokemon.FIND_BY_NOM, query = "SELECT p FROM Pokemon p WHERE p.Nom = :fnom")
 }) 
+
 public class Pokemon {
 
     public static final String FIND_BY_TYPE = "findPokemonByType";
@@ -25,7 +26,23 @@ public class Pokemon {
     /* @Enumerated(EnumType.STRING) */
     private String Type1;
 
-    /* @Enumerated(EnumType.STRING) */
+    public String getType1() {
+		return Type1;
+	}
+
+	public void setType1(String type1) {
+		Type1 = type1;
+	}
+
+	public String getType2() {
+		return Type2;
+	}
+
+	public void setType2(String type2) {
+		Type2 = type2;
+	}
+
+	/* @Enumerated(EnumType.STRING) */
     private String Type2;
 
     private String Caractere;

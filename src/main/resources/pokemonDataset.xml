@@ -1,5 +1,14 @@
 <dataset>
-    <Pokemon Nom="@RamolossPiot" Type1="Normal" Type2="Psy" Caractere="Malsain" Couleur="Rose bonbon" Eleveur="PoussinPiot" Evolution="Flagadoss"
-	Prevolution="null" Cri="Ramo-Ramoloss" Num="123" Experience="0" Niveau="1" VieMax="100" VieActuel="100" Attaque="10" Taille="41" Poid="40"
-	/>
+	<Attaque NomAttaque="trempette" TypeAttaque="eau" Pp="10" Puissance="0" Precision="100"/>
+	
+	<Attaque NomAttaque="chocMental" TypeAttaque="psy" Pp="10" Puissance="10" Precision="100"/>
+    
+    <Pokemon Nom="@RamolossPiot" Type1="Normal" Type2="Psy" Caractere="Malsain" Couleur="Rose bonbon" Eleveur="@PoussinPiot" Evolution="Flagadoss"
+	Prevolution="null" Cri="Ramo-Ramoloss" Num="123" Experience="0" Niveau="1" VieMax="100" VieActuel="100" Attaque="10" Taille="41" Poid="40"/>
+	
+	<Pokemon Nom="@MagicarpePiot" Type1="eau" Type2="null" Caractere="Fou" Couleur="Orange corail" Eleveur="null" Evolution="Leviator"
+	Prevolution="null" Cri="Carpe Carpe Magicarpe" Num="146" Experience="0" Niveau="1" VieMax="100" VieActuel="100" Attaque="10" Taille="15" Poid="3"/>
+	
+	<Pokemon Nom="@PsykokwakPiot" Type1="eau" Type2="psy" Caractere="Vicieux" Couleur="Jaune" Eleveur="@SpaceDuck_42" Evolution="Aquakwak"
+	Prevolution="null" Cri="Psyko ... kwak ?" Num="054" Experience="0" Niveau="1" VieMax="100" VieActuel="100" Attaque="10" Taille="15" Poid="3"/>
 </dataset>

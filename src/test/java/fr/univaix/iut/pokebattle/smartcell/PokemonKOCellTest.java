@@ -1,7 +1,8 @@
-package fr.univaix.iut.pokebattle.bot;
+package fr.univaix.iut.pokebattle.smartcell;
+
+import static org.junit.Assert.assertEquals;
 
 import java.sql.Connection;
-import java.util.Date;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,20 +11,20 @@ import javax.persistence.Persistence;
 import org.dbunit.database.DatabaseConnection;
 import org.dbunit.dataset.xml.FlatXmlDataSet;
 import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
+import org.dbunit.operation.DatabaseOperation;
 import org.eclipse.persistence.internal.jpa.EntityManagerImpl;
+import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
 import fr.univaix.iut.pokebattle.DAOFactoryJPA;
-import fr.univaix.iut.pokebattle.smartcell.*;
+import fr.univaix.iut.pokebattle.DAOPokemon;
+import fr.univaix.iut.pokebattle.Pokemon;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
 
+public class PokemonKOCellTest {
 
-public class PokeBot implements Bot {
-    /**
-     * List of smartcell the questions go through to
-     * find an answer.
-     */
-	PokemonCriesGeneCell cell = new PokemonCriesGeneCell();
+	PokemonKOCell cell = new PokemonKOCell();
 	
 	private static EntityManager entityManager;
     private static FlatXmlDataSet dataset;
@@ -33,7 +34,7 @@ public class PokeBot implements Bot {
 	@BeforeClass
 	public static void initTestFixture() throws Exception {
 	    // Get the entity manager for the tests.
-	    entityManagerFactory = Persistence.createEntityManagerFactory("pokebattlePU");
+	    entityManagerFactory = Persistence.createEntityManagerFactory("pokebattlePUTest");
 	    entityManager = entityManagerFactory.createEntityManager();
 
 	    DAOFactoryJPA.setEntityManager(entityManager);
@@ -46,30 +47,21 @@ public class PokeBot implements Bot {
 	            .getResourceAsStream("pokemonDataset.xml"));
 	}
 	
-    final SmartCell[] smartCells = new SmartCell[]{
-    		
-            new PokemonOwnerCell(),
-            new PokemonCaptureCell(),
-            new PokemonAttackCell(),
-            new JugeAttaqueCell(),
-    		new PokemonCriesGeneCell()
-    };
-
-    Date DateTweet = new Date ();
-    @Override
-    public String ask(Tweet question) 
-    {
-        for (SmartCell cell : smartCells)
-        {
-            String answer = cell.ask(question);
-            if (answer != null)
-            	return answer + "       // à : " 
-							+ DateTweet.getHours() + ":" 
-							+ DateTweet.getMinutes() + ":"
-							+ DateTweet.getSeconds();
-             
-        }
-        return null;
-    }
-
+	@Before
+	public void setUp() throws Exception {
+	    //Clean the data from previous test and insert new data test.
+	    DatabaseOperation.CLEAN_INSERT.execute(dbUnitConnection, dataset);
+	}
+	
+    @Test
+    public void testNotKo() {
+    	assertEquals(null, 
+    	cell.ask(new Tweet("@PsykokwakPiot -10pv /cc @SpaceDuck_42 @PoussinPiot","JugePiot","RamolossPiot")));
+    	}
+    
+    @Test
+    public void testKo() {
+    	assertEquals("#KO /cc @JugePiot @SpaceDuck_42 @PoussinPiot", 
+    	cell.ask(new Tweet("@RamolossPiot -10pv /cc @PoussinPiot @SpaceDuck_42","JugePiot","RamolossPiot")));
+    	}
 }

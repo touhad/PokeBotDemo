@@ -9,7 +9,6 @@ public class Tweet {
         this.text = text;
     }
 
-
     public Tweet(String text, String screenName, String pokemonName) {
 		super();
 		this.text = text;

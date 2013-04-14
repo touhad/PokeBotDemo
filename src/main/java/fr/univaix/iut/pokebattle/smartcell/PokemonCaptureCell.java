@@ -1,5 +1,7 @@
 package fr.univaix.iut.pokebattle.smartcell;
 
+import fr.univaix.iut.pokebattle.DAOFactoryJPA;
+import fr.univaix.iut.pokebattle.DAOPokemon;
 import fr.univaix.iut.pokebattle.Pokemon;
 import fr.univaix.iut.pokebattle.twitter.Tweet;
 
@@ -8,30 +10,39 @@ public class PokemonCaptureCell implements SmartCell {
 
     public String ask(Tweet question) {
 
-        String Question = question.getText(); // Question contient le Tweet
-        String NomEleveur = question.getScreenName(); //Contiens le nom du twitteur
-        Pokemon Ramoloss = new Pokemon();
-
-		/* TO-DO 
-         * -Récupérer le nom du pokemon
-		 * -Se connecter au pokemon correspondant
-		 * -Récupérer son nom d'éleveur !
-		 * - Si pas d'éleveur modifier dans la base le nouvelle éleveur
-		 * -Adapter la suite du code et fini !
-		 */
-
-        if (Question.contains("pokeball!")) {
-            String bits[] = Question.split("pokeball!");
-            String NomPokemon = bits[0]; /* NomPokemon contient le nom du pokemon a capturer */
-            if (Ramoloss.IsSauvage(Ramoloss))
-                Ramoloss.setEleveur(NomEleveur);
+    	// Question contient le Tweet.
+        String Question = question.getText(); 
+        
+        if (Question.contains("pokeball")) {
+        	
+        	//Contiens le nom du twitteur.
+	        String NomTwitteur = question.getScreenName(); 
+	        
+	        // Recupere le nom du pokemon que l'on veux capturer.
+	        String bits[] = Question.split("pokeball");
+	        String pkm = bits[0];
+	        
+	        DAOPokemon DAO = DAOFactoryJPA.createDAOPokemon();
+	        Pokemon pokemon = DAO.getById(pkm);
+	        
+	        String Eleveur = pokemon.getEleveur();
+	        
+	        if (Eleveur.contentEquals("null")) {
+	        	pokemon.setEleveur(NomTwitteur);
+	        	Eleveur = pokemon.getEleveur();
+	        	
+	        }
+	        	
+	        System.out.println(NomTwitteur + " " + Eleveur + " is my owner");
+	        return NomTwitteur + " " + Eleveur + " is my owner";
+	        
         }
+        
+        return null;
 
-        return "@" + NomEleveur + " " + "@" + Ramoloss.getEleveur() + " is my owner";
+    } // ask()
 
-    }
-
-}
+} // PokemonCaptureCell()
 
 
 

@@ -1,27 +1,27 @@
 package fr.univaix.iut.pokebattle;
 
-import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
+import java.util.List;
 
-public class DAO_JPA_Pokemon implements DAOPokemon {
+public class DAO_JPA_Juge {
 
     private EntityManager entityManager;
 
-    public DAO_JPA_Pokemon(EntityManager entityManager) {  
+    public DAO_JPA_Juge(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
-    public List<Pokemon> findByType(String type) {
-        TypedQuery<Pokemon> query = entityManager.createNamedQuery(Pokemon.FIND_BY_TYPE, Pokemon.class);
-        query.setParameter("ftype", type);
+
+    public List<Juge> findByNom(String nom) {
+        TypedQuery<Juge> query = entityManager.createNamedQuery(Juge.FIND_BY_NOM, Juge.class);
+        query.setParameter("fnom", nom);
         return query.getResultList();
     }
 
-    @Override
-    public boolean delete(Pokemon obj) {  
+
+    public boolean delete(Juge obj) {
         try {
             EntityTransaction tx = entityManager.getTransaction();
             tx.begin();
@@ -33,28 +33,27 @@ public class DAO_JPA_Pokemon implements DAOPokemon {
         }
     }
 
-    @Override
-    public List<Pokemon> findAll() {
-        TypedQuery<Pokemon> query = entityManager.createNamedQuery(Pokemon.FIND_ALL, Pokemon.class);
+
+    public List<Juge> findAll() {
+        TypedQuery<Juge> query = entityManager.createNamedQuery(Juge.FIND_ALL, Juge.class);
         return query.getResultList();
     }
 
-    @Override
-    public Pokemon getById(String id) {
-        return entityManager.find(Pokemon.class, id);
+    public Juge getById(String num) {
+        return entityManager.find(Juge.class, num);
     }
 
-    @Override
-    public Pokemon insert(Pokemon obj) {
+
+    public Juge insert(Juge obj) {
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
         entityManager.persist(obj);
         tx.commit();
-        return entityManager.find(Pokemon.class, obj.getNom());
+        return entityManager.find(Juge.class, obj.getNom());
     }
 
-    @Override
-    public boolean update(Pokemon obj) {
+
+    public boolean update(Juge obj) {
         try {
             EntityTransaction tx = entityManager.getTransaction();
             tx.begin();
@@ -66,4 +65,4 @@ public class DAO_JPA_Pokemon implements DAOPokemon {
         }
     }
 
-}
+} // DAO_JPA_Juge

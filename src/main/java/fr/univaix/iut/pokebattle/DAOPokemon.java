@@ -4,5 +4,6 @@ import java.util.List;
 
 public interface DAOPokemon extends DAO<Pokemon, String> {
     public List<Pokemon> findByType(String type);
-    public Pokemon findByNom(String nom);
+    public Pokemon getById(String nom);
+    
 }

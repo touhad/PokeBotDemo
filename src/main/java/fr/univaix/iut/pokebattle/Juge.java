@@ -1,9 +1,40 @@
 package fr.univaix.iut.pokebattle;
 
-public class Juge {
-    private String Nom;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 
-    void TraiteAttaque(Pokemon pokemonA, Pokemon pokemonD) {
+@Entity
+@NamedQueries({
+        @NamedQuery(name = Juge.FIND_ALL, query = "SELECT j FROM Juge j"),
+        @NamedQuery(name = Juge.FIND_BY_NOM, query = "SELECT j FROM Juge j WHERE j.Nom = :fnom")})
+
+
+
+public class Juge {
+	
+    public static final String FIND_BY_NOM = "findJugeByNom";
+    public static final String FIND_ALL = "findAllJuge";
+    
+	@Id
+	private int Num;
+	
+    private String Nom;
+    
+ 
+
+	public int getNum() {
+		return Num;
+	}
+
+
+	public void setNum(int num) {
+		Num = num;
+	}
+
+
+	void TraiteAttaque(Pokemon pokemonA, Pokemon pokemonD) {
         /* TO-DO
          *
 		 * -On se connecte à la base et on récupére les deux pokemons.
@@ -22,13 +53,40 @@ public class Juge {
     public void setNom(String nom) {
         Nom = nom;
     }
+    
+    @Override
+	public String toString() {
+		return "Juge [Num=" + Num + ", Nom=" + Nom + "]";
+	}
 
-	
-	
-	
-	
-/*	pcreux: "@bulbizare1 #attack #charge @pikachuNyanNian /cc @nedseb @viviane"
-	bulbizare1: "@pikachuNyanNian #attack #charge /cc @nedseb @pcreux @viviane" */
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Nom == null) ? 0 : Nom.hashCode());
+		result = prime * result + Num;
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Juge other = (Juge) obj;
+		if (Nom == null) {
+			if (other.Nom != null)
+				return false;
+		} else if (!Nom.equals(other.Nom))
+			return false;
+		if (Num != other.Num)
+			return false;
+		return true;
+	}
 
 }

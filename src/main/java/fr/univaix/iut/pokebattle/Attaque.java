@@ -18,8 +18,11 @@ public class Attaque {
     public static final String FIND_BY_TYPE = "findAttaqueByType";
     public static final String FIND_ALL = "findAllAttaque";
     public static final String FIND_BY_NOM = "findAttaqueByNom";
+    
     @Id
     private String NomAttaque;
+    
+    /* @Enumerated(EnumType.STRING) */
     private String TypeAttaque;
     
     private int Pp;
@@ -30,9 +33,7 @@ public class Attaque {
     public Attaque() {
         // TODO Auto-generated constructor stub
     }
-    
-    
-    
+     
 	public String getNomAttaque() {
 		return NomAttaque;
 	}

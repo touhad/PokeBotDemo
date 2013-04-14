@@ -17,4 +17,7 @@ public class DAOFactoryJPA {
 	public static DAOEleveur createDAOEleveur() {
 		return new DAO_JPA_Eleveur(entityManager);
 	}
+	public static DAOAttaque createDAOAttaque() {
+		return new DAO_JPA_Attaque(entityManager);
+	}
 }

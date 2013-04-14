@@ -24,9 +24,9 @@ public class PokemonCriesGeneCell implements SmartCell {
         
         String Cri = pokemon.getCri();
 
-        System.out.println(Cri + Twitteur);
-
-
-        return Twitteur + " " + Cri + ".."  ;
+        
+        
+        System.out.println(Twitteur + " " + Cri);
+        return Twitteur + " " + Cri;
     }
 }

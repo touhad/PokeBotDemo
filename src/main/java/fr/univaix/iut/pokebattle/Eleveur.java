@@ -14,10 +14,11 @@ public class Eleveur {
     public static final String FIND_BY_NOM = "findEleveurByNom";
     public static final String FIND_ALL = "findAllEleveur";
 
-    // Les points sont l'experience aquise par le dresseur.
+    // Pts sont l'experience aquise par le dresseur.
     @Id
-    private String Nom;
     private int Num;
+    
+    private String Nom;
     private int Pts;
 
     // Constructeur Eleveur
