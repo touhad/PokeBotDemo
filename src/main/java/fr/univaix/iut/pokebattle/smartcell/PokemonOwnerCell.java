@@ -16,6 +16,7 @@ public class PokemonOwnerCell implements SmartCell {
         if (q.contains("owner?"))
         {
         
+        	/* */
 	        String bits[] = q.split(" ");
 	        String pkm = bits[0];
 	        	
